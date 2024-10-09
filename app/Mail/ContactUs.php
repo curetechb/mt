@@ -5,9 +5,11 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+
 
 class ContactUs extends Mailable
 {
@@ -29,6 +31,7 @@ class ContactUs extends Mailable
         return new Envelope(
             subject: 'Contact Us',
             from: new Address('support@muslim.town','Acme Media'),
+            // from: new Address('support@muslim.town','Acme Media'),
         );
     }
 

@@ -1,9 +1,9 @@
 <x-mail::message>
-# Hello, you have got an enquiry!
+# Welcome to Muslim Town
 
 <h3>Name: {{ $data['name']}}</h3>
 <h3>Email: {{ $data['email']}}</h3>
-<h3>Description: {{ $data['description']}}</h3>
+{{-- <h3>Description: {{ $data['description']}}</h3> --}}
 
 <x-mail::button :url="''">
 Button Text

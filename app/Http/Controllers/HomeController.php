@@ -11,7 +11,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home');
+        return view ('home');
     }
 
     public function create()
@@ -29,8 +29,10 @@ class HomeController extends Controller
         ]);
 
         Mail::to('support@muslim.town')->send(new ContactUs($data));
+
+        return redirect()->back()->with('success','Message sent successfully');
         // print_r($request->all());
-        dd('sent');
+        // dd('sent');
     }
 
 
