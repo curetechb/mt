@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -11,7 +13,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
 
     public function create()
     {
@@ -22,12 +23,14 @@ class HomeController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
         ]);
+
+        Mail::to('support@muslim.town')->send(new ContactUs($data));
         // print_r($request->all());
-        dd($request->all());
+        dd('sent');
     }
 
 

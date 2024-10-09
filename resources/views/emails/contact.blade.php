@@ -1,7 +1,9 @@
 <x-mail::message>
-# Introduction
+# Hello, you have got an enquiry!
 
-The body of your message.
+<h3>Name: {{ $data['name']}}</h3>
+<h3>Email: {{ $data['email']}}</h3>
+<h3>Description: {{ $data['description']}}</h3>
 
 <x-mail::button :url="''">
 Button Text
