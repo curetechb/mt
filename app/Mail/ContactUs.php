@@ -30,7 +30,7 @@ class ContactUs extends Mailable
     {
         return new Envelope(
             subject: 'Contact Us',
-            from: new Address('support@muslim.town','Acme Media'),
+            from: new Address('support@muslim.town','Muslim Town'),
             // from: new Address('support@muslim.town','Acme Media'),
         );
     }

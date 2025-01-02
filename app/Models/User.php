@@ -2,44 +2,159 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Cart;
+use App\Notifications\EmailVerificationNotification;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use Notifiable, HasApiTokens;
+
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new EmailVerificationNotification());
+    }
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $fillable = [
         'name',
         'email',
         'password',
+        'address',
+        'city',
+        'postal_code',
+        'phone',
+        'country',
+        'referral_code',
+        'provider_id',
+        'email_verified_at',
+        'verification_code',
+        'is_verified',
+        'is_d',
+        'is_new_user',
+        "is_b2b_user",
+        "balance",
+        "balance_due"
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * The attributes that should be hidden for arrays.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
+    }
+
+    public function customer()
+    {
+        return $this->hasOne(Customer::class);
+    }
+
+    public function seller()
+    {
+        return $this->hasOne(Seller::class);
+    }
+
+    public function affiliate_user()
+    {
+        return $this->hasOne(AffiliateUser::class);
+    }
+
+    public function affiliate_withdraw_request()
+    {
+        return $this->hasMany(AffiliateWithdrawRequest::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function shop()
+    {
+        return $this->hasOne(Shop::class);
+    }
+
+    public function staff()
+    {
+        return $this->hasOne(Staff::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function wallets()
+    {
+        return $this->hasMany(Wallet::class)->orderBy('created_at', 'desc');
+    }
+
+    public function club_point()
+    {
+        return $this->hasOne(ClubPoint::class);
+    }
+
+    public function customer_package()
+    {
+        return $this->belongsTo(CustomerPackage::class);
+    }
+
+    public function customer_package_payments()
+    {
+        return $this->hasMany(CustomerPackagePayment::class);
+    }
+
+    public function customer_products()
+    {
+        return $this->hasMany(CustomerProduct::class);
+    }
+
+    public function seller_package_payments()
+    {
+        return $this->hasMany(SellerPackagePayment::class);
+    }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    public function affiliate_log()
+    {
+        return $this->hasMany(AffiliateLog::class);
+    }
+
+    public function product_bids()
+    {
+        return $this->hasMany(AuctionProductBid::class);
+    }
+
+    public function delivery_boy()
+    {
+        return $this->hasOne(DeliveryBoy::class);
+    }
 }
