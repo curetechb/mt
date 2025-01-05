@@ -219,24 +219,24 @@ Route::get('salim', function () {
 Route::get('hosen', function(){
 
     $array = array(
-        // array("product_price" => 100,"val1"=>"White Cup, youre my world", "val2"=>"1", "val3"=>"24", "val4"=>"6", "val5"=>"", "val6"=>"18",),
-        // array("product_price" => 100,"val1"=>"Pink Cup, youre my ❤️", "val2"=>"2", "val3"=>"21", "val4"=>"6", "val5"=>"", "val6"=>"15",),
-        // array("product_price" => 100,"val1"=>"Green Cup x 3, plan start finish", "val2"=>"3", "val3"=>"24", "val4"=>"2", "val5"=>"", "val6"=>"22",),
-        // array("product_price" => 100,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"49", "val4"=>"10", "val5"=>"1", "val6"=>"39",),
-        // array("product_price" => 100,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"46", "val4"=>"5", "val5"=>"3", "val6"=>"41",),
-        // array("product_price" => 100,"val1"=>"Sweat Jumper (White)", "val2"=>"6", "val3"=>"47", "val4"=>"34", "val5"=>"4", "val6"=>"13",),
-        // array("product_price" => 100,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"83", "val4"=>"0", "val5"=>"", "val6"=>"83",),
-        // array("product_price" => 100,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"84", "val4"=>"0", "val5"=>"", "val6"=>"84",),
-        array("product_price" => 100,"val1"=>"Shal (Chaina)", "val2"=>"7", "val3"=>"17", "val4"=>"8", "val5"=>"", "val6"=>"9",),
-        array("product_price" => 100,"val1"=>"Shal (Bangla))", "val2"=>"8", "val3"=>"3", "val4"=>"0", "val5"=>"", "val6"=>"3",),
-        array("product_price" => 100,"val1"=>"Green Mug (Akij)", "val2"=>"3", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
-        array("product_price" => 100,"val1"=>"Pink Mug (Akij)", "val2"=>"2", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
-        array("product_price" => 100,"val1"=>"Sweat Jumper (Black)", "val2"=>"9", "val3"=>"6", "val4"=>"1", "val5"=>"", "val6"=>"5",),
-        // array("product_price" => 100,"val1"=>"Hudi (Black)", "val2"=>"10", "val3"=>"10", "val4"=>"2", "val5"=>"", "val6"=>"8",),
-        array("product_price" => 100,"val1"=>"T-Shirt (White)", "val2"=>"11", "val3"=>"90", "val4"=>"0", "val5"=>"", "val6"=>"90",),
-        array("product_price" => 100,"val1"=>"T-shirt (Black)", "val2"=>"12", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",),
-        array("product_price" => 100,"val1"=>"Pillow cover", "val2"=>"13", "val3"=>"58", "val4"=>"0", "val5"=>"", "val6"=>"58",),
-        array("product_price" => 100,"val1"=>"Table mat", "val2"=>"14", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",)
+        array("published" => true, "product_price" => 600,"val1"=>"White Cup, youre my world", "val2"=>"1", "val3"=>"24", "val4"=>"6", "val5"=>"", "val6"=>"18",),
+        array("published" => true, "product_price" => 600,"val1"=>"Pink Cup, youre my ❤️", "val2"=>"2", "val3"=>"21", "val4"=>"6", "val5"=>"", "val6"=>"15",),
+        array("published" => true, "product_price" => 600,"val1"=>"Green Cup x 3, plan start finish", "val2"=>"3", "val3"=>"24", "val4"=>"2", "val5"=>"", "val6"=>"22",),
+        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"49", "val4"=>"10", "val5"=>"1", "val6"=>"39",),
+        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"46", "val4"=>"5", "val5"=>"3", "val6"=>"41",),
+        array("published" => true, "product_price" => 1200,"val1"=>"Sweat Jumper (White)", "val2"=>"6", "val3"=>"47", "val4"=>"34", "val5"=>"4", "val6"=>"13",),
+        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"83", "val4"=>"0", "val5"=>"", "val6"=>"83",),
+        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"84", "val4"=>"0", "val5"=>"", "val6"=>"84",),
+        array("published" => false, "product_price" => 1000,"val1"=>"Shal (Chaina)", "val2"=>"7", "val3"=>"17", "val4"=>"8", "val5"=>"", "val6"=>"9",),
+        array("published" => false, "product_price" => 1000,"val1"=>"Shal (Bangla))", "val2"=>"8", "val3"=>"3", "val4"=>"0", "val5"=>"", "val6"=>"3",),
+        array("published" => true, "product_price" => 600,"val1"=>"Green Mug (Akij)", "val2"=>"3", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
+        array("published" => true, "product_price" => 600,"val1"=>"Pink Mug (Akij)", "val2"=>"2", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
+        array("published" => true, "product_price" => 1200,"val1"=>"Sweat Jumper (Black)", "val2"=>"9", "val3"=>"6", "val4"=>"1", "val5"=>"", "val6"=>"5",),
+        array("published" => true, "product_price" => 1400,"val1"=>"Hudi (Black)", "val2"=>"10", "val3"=>"10", "val4"=>"2", "val5"=>"", "val6"=>"8",),
+        array("published" => true, "product_price" => 400,"val1"=>"T-Shirt (White)", "val2"=>"11", "val3"=>"90", "val4"=>"0", "val5"=>"", "val6"=>"90",),
+        array("published" => true, "product_price" => 400,"val1"=>"T-shirt (Black)", "val2"=>"12", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",),
+        array("published" => false, "product_price" => 1000,"val1"=>"Pillow cover", "val2"=>"13", "val3"=>"58", "val4"=>"0", "val5"=>"", "val6"=>"58",),
+        array("published" => false, "product_price" => 1000,"val1"=>"Table mat", "val2"=>"14", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",)
     );
 
     \DB::beginTransaction();

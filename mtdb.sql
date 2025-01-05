@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 10, 2024 at 12:36 PM
+-- Generation Time: Jan 05, 2025 at 01:07 PM
 -- Server version: 10.11.10-MariaDB
 -- PHP Version: 7.2.34
 
@@ -79,7 +79,41 @@ CREATE TABLE `addresses` (
 --
 
 INSERT INTO `addresses` (`id`, `user_id`, `name`, `address`, `country_id`, `state_id`, `city_id`, `floor_no`, `apartment`, `longitude`, `latitude`, `postal_code`, `phone`, `set_default`, `created_at`, `updated_at`) VALUES
-(3620, NULL, 'Salim Hosen', 'dhaka, bangladesh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01762473884', 1, '2024-12-10 05:50:42', '2024-12-10 05:50:42');
+(1, NULL, 'Salim Hosen', 'dhaka, bangladesh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01762473884', 1, '2024-12-10 05:50:42', '2024-12-10 05:50:42'),
+(2, NULL, 'Monir Hossain', 'MCC Tower Level 7. House 76.Road 127.Gulshan Avenue. Gulshan-1 Dhaka.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01633950636', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(3, NULL, 'Sazzad', 'Puraton bahadur bajar, dinajpur', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01723313735', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(4, NULL, 'Dr. Shetu', 'check post, rangpur', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01300157359', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(5, NULL, 'Mohammad Redwan', 'Hemayet pur, joyna bari madrasa road', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01333393558', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(6, NULL, 'Belal Hosain', 'Tazumuddin Haque Road, Bhola', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01756641181', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7, NULL, 'Tahmina zahan', 'Feni mohipal temuhani', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01706114609', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(8, NULL, 'Qari Monir Hossein', 'Nangalkot Police Station, Volain Bazar', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01884283124', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(9, NULL, 'Siam Admad', 'Moulvibazar,Juri', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1967152807', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(10, NULL, 'Shaid Ahmad', 'Chander kandi, Raipura, Narsindi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1925179230', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(11, NULL, 'Md Touhid', 'TIC colony, Sector 4, Uttara', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01804665531', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(12, NULL, 'MD Safwaan Saad', 'House-2, Rd-9, Block-C, Bosila City Developer Housing(near bosila bridge), Mohammadpur, Dhaka', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01753545456', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(13, NULL, 'Faria Islam', 'Curetech Ltd., Shagufta Tower', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01711815400', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(14, NULL, 'Tasmin Ahmed', 'Shagufta tower, Curetechbd,  Gulshan Badda Link road', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01722065374', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(15, NULL, 'Nafis Noor', 'Keraniganj,Dhaka', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01876856860', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(16, NULL, 'Apple Mahmud', 'Shagufta tower, Curetechbd,  Gulshan Badda Link road', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01726014285', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(17, NULL, 'Sayid mirza', 'Shagufta tower, Curetechbd,  Gulshan Badda Link road', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01711555645', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(18, NULL, 'Risad Mahmud', 'Tower Hamlet, 16 Kemal Ataturk Avenue, Banani, dhaka-1213( Al-Arafah islami bank, banani branch, 2nd floor)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01941196277', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(19, NULL, 'Alsarafat Ullah', 'Hajiganj Rajargaon bazar', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01837106084', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(20, NULL, 'Sagor', 'Faridpur sadarpur', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01321794437', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(21, NULL, 'Al Amin Ahsan', 'Rajshahi, Chapai Nawabganj, Nachol, Nizampur Islami Bank(ground floor)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01614357236', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(22, NULL, 'RS Al-amin', 'Botbazar gacha road', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01724121069', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(23, NULL, 'Alomgir Patowary', 'Ambagan, Matirangga, Khagrachari', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01862020259', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(24, NULL, 'Ashraf ', '61 sikkatuli lean nazira bazar bangshal Dhaka near sikkatuli park ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01675787111', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(25, NULL, 'Mohammad Mehedi Hasan', 'Curetech Office', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01614265425', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(26, NULL, 'Hm Habibullah Redoan ', 'Dhaka centonment Balu ghat.  Baron tek', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01742900864 ', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(27, NULL, 'Siam ', 'kalihati, Tangail', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01325238314', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(28, NULL, 'Md. Durul Huda', 'teacher ferdous Alam Firoj High School, Firoj Nagar Gandina, Kalihati, Tangail', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01871495034', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(29, NULL, 'Faruk', 'D/s:chittagong, Thana: mirshari, Village:mithanala, Union: 10 number bot office ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01829089472', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(30, NULL, 'তারেক মাহমুদ', 'গ্রাম গাজির কান্দি ইউনিয়ন কৃষ্ণ নগর থানা নবীনগর জেলা ব্রাক্ষণবাড়িয়া ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01646376749', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(31, NULL, 'মো: মাহমুদুল হাসান সা\'দ', 'গ্রাম :নওদাপাড়া হাফিজিয়া মাদ্রাসা, আটঘরিয়া, পাবনা।', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01991674949', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(32, NULL, 'Falguni Ahmmad Kaira', 'Sagufta Tower, House- TA136, (1st Floor), Gulshan Badda Link Road, Dhaka 1212', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01757471130', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(33, NULL, 'Md Muaj', 'Chormonay, Barishal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ' 01971751799', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(34, NULL, 'Rouzatul Jannat', 'Road 20, House 33, Rupnagar R/A, Mirpur, Dhaka 1216', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01791913417', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(35, NULL, 'Mariya ', 'Titas Cumilla , Batakandi Bajar Subuj Banglar samne', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01703933945', 1, '2024-12-26 13:02:54', '2024-12-26 13:02:54');
 
 -- --------------------------------------------------------
 
@@ -354,7 +388,7 @@ INSERT INTO `business_settings` (`id`, `type`, `value`, `lang`, `created_at`, `u
 (55, 'classified_product', '0', NULL, '2020-05-13 13:01:05', '2020-05-13 13:01:05'),
 (56, 'pos_activation_for_seller', '1', NULL, '2020-06-11 09:45:02', '2020-06-11 09:45:02'),
 (57, 'shipping_type', 'flat_rate', NULL, '2020-07-01 13:49:56', '2022-04-03 00:22:20'),
-(58, 'flat_rate_shipping_cost', '40', NULL, '2020-07-01 13:49:56', '2023-02-07 16:43:27'),
+(58, 'flat_rate_shipping_cost', '0', NULL, '2020-07-01 13:49:56', '2024-12-12 10:12:59'),
 (59, 'shipping_cost_admin', '20', NULL, '2020-07-01 13:49:56', '2022-03-12 21:37:35'),
 (60, 'payhere_sandbox', '0', NULL, '2020-07-30 18:23:53', '2020-07-30 18:23:53'),
 (61, 'payhere', '0', NULL, '2020-07-30 18:23:53', '2020-07-30 18:23:53'),
@@ -481,6 +515,14 @@ CREATE TABLE `carts` (
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `owner_id`, `user_id`, `temp_user_id`, `address_id`, `product_id`, `variation`, `price`, `tax`, `shipping_cost`, `shipping_type`, `pickup_point`, `discount`, `product_referral_code`, `coupon_code`, `coupon_applied`, `quantity`, `created_at`, `updated_at`) VALUES
+(48511, NULL, NULL, 'tsOKvR0shrZPNsHP', 0, 1, NULL, 0.00, 0.00, 0.00, '', NULL, 0.00, NULL, NULL, 0, 1, '2025-01-02 12:37:57', '2025-01-02 12:37:57'),
+(48513, NULL, NULL, 'WsqKHl2NDahH0gjE', 0, 16, NULL, 0.00, 0.00, 0.00, '', NULL, 0.00, NULL, NULL, 0, 1, '2025-01-05 11:46:04', '2025-01-05 11:46:04');
+
 -- --------------------------------------------------------
 
 --
@@ -514,8 +556,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `parent_id`, `level`, `name`, `order_level`, `commision_rate`, `banner`, `icon`, `featured`, `top`, `digital`, `slug`, `meta_title`, `meta_description`, `created_at`, `updated_at`, `image`, `is_active`, `is_b2b_category`) VALUES
-(279, 0, 0, 'Home Appliances', 0, 0.00, NULL, '11176', 0, 0, 0, 'home-appliances', 'Home Appliances', 'Home Appliances', '2024-12-10 06:56:47', '2024-12-10 12:56:47', '11167', 1, 0),
-(280, 0, 0, 'Cloth', 0, 0.00, NULL, NULL, 0, 0, 0, 'Cloth-BzkD0', NULL, NULL, '2024-12-10 12:56:02', '2024-12-10 12:56:02', NULL, 1, 0);
+(281, 0, 0, 'Cloth', 0, 0.00, NULL, NULL, 0, 0, 0, 'Cloth-c0TPZ', NULL, NULL, '2024-12-30 07:17:40', '2024-12-30 07:17:40', NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -531,60 +572,6 @@ CREATE TABLE `category_translations` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-
---
--- Dumping data for table `category_translations`
---
-
-INSERT INTO `category_translations` (`id`, `category_id`, `name`, `lang`, `created_at`, `updated_at`) VALUES
-(13, 13, 'Meat & Poultry', 'en', '2022-03-04 21:23:34', '2022-03-25 22:52:52'),
-(14, 14, 'Fish', 'en', '2022-03-04 21:31:09', '2022-04-05 13:56:02'),
-(15, 13, 'মাংস', 'bd', '2022-03-04 21:33:32', '2022-03-04 21:33:32'),
-(16, 14, 'মাছ', 'bd', '2022-03-04 21:36:08', '2022-03-04 21:36:08'),
-(20, 17, 'Vegetables', 'en', '2022-03-10 13:56:08', '2022-03-27 11:25:47'),
-(26, 23, 'Mudi Items', 'en', '2022-03-10 15:02:41', '2022-03-25 23:07:41'),
-(28, 25, 'Spices', 'en', '2022-03-10 15:08:26', '2022-03-21 12:24:16'),
-(29, 26, 'Dairy', 'en', '2022-03-13 12:31:45', '2022-03-25 22:58:57'),
-(30, 27, 'Cooking Oil', 'en', '2022-03-13 12:32:57', '2022-03-25 22:57:28'),
-(44, 17, 'Vegetables & Fruits', 'bd', '2022-03-20 16:07:11', '2022-03-25 22:44:26'),
-(48, 25, 'মশলা', 'bd', '2022-03-21 12:24:39', '2022-03-21 12:24:39'),
-(50, 27, 'তেল', 'bd', '2022-03-21 12:26:10', '2022-03-21 12:26:10'),
-(51, 23, 'চাল', 'bd', '2022-03-21 12:27:39', '2022-03-21 12:27:39'),
-(61, 26, 'দুধ', 'bd', '2022-03-21 13:04:27', '2022-03-21 13:04:27'),
-(62, 28, 'Fruits', 'en', '2022-05-28 16:06:56', '2022-05-28 16:06:56'),
-(63, 29, 'Baby Care', 'en', '2022-06-19 17:07:43', '2022-06-19 17:07:43'),
-(64, 30, 'Frozen & Canned', 'en', '2022-06-20 15:47:27', '2022-06-21 15:32:42'),
-(65, 31, 'Snacks', 'en', '2022-06-28 14:13:15', '2022-06-28 14:13:15'),
-(66, 32, 'Drinks', 'en', '2022-06-29 12:14:46', '2022-06-29 12:14:46'),
-(67, 33, 'Combo package', 'en', '2022-08-02 15:44:56', '2022-08-02 15:44:56'),
-(68, 34, 'Personal Care', 'en', '2022-08-10 12:32:34', '2022-08-10 12:32:34'),
-(69, 35, 'Pet Care', 'en', '2022-09-04 13:40:05', '2022-09-04 13:40:05'),
-(70, 36, 'Sweets', 'en', '2022-09-22 14:55:10', '2022-09-25 12:06:09'),
-(71, 37, 'Winter Collection', 'en', '2022-11-15 16:32:26', '2022-11-15 16:32:26'),
-(73, 39, 'Breakfast', 'en', '2022-11-23 16:45:29', '2022-11-23 16:45:29'),
-(74, 40, 'B2B', 'en', '2022-12-28 12:20:40', '2022-12-28 12:20:40'),
-(75, 47, 'Baby Care', 'en', '2023-01-16 14:36:05', '2023-01-16 14:36:05'),
-(76, 44, 'Cleaning Supplies', 'en', '2023-01-16 14:41:42', '2023-01-16 14:41:42'),
-(77, 48, 'Home & Kitchen', 'en', '2023-01-16 14:44:34', '2023-01-16 14:44:34'),
-(78, 50, 'Pet Care', 'en', '2023-01-16 14:46:45', '2023-01-16 14:46:45'),
-(79, 83, 'Skin Care', 'en', '2023-01-16 14:47:41', '2023-01-16 14:47:41'),
-(80, 41, 'FIFA World Cup', 'en', '2023-01-18 01:15:08', '2023-01-18 01:15:08'),
-(81, 42, 'Flash Sales', 'en', '2023-01-18 01:15:33', '2023-01-18 01:15:33'),
-(82, 43, 'Food', 'en', '2023-01-18 01:18:32', '2023-01-18 01:18:32'),
-(83, 78, 'Women\'s Care', 'en', '2023-01-18 01:44:52', '2023-01-18 01:44:52'),
-(84, 54, 'Vehicle Essentials', 'en', '2023-01-18 13:54:39', '2023-01-18 13:54:39'),
-(85, 63, 'Beverages', 'en', '2023-02-07 17:36:33', '2023-02-07 17:36:33'),
-(86, 61, 'Candy & Chocolate', 'en', '2023-02-07 17:40:56', '2023-02-07 17:40:56'),
-(87, 57, 'Cooking', 'en', '2023-02-07 17:42:01', '2023-02-07 17:42:01'),
-(88, 59, 'Dairy & Eggs', 'en', '2023-02-07 17:43:22', '2023-02-07 17:43:22'),
-(89, 66, 'Diabetic Food', 'en', '2023-02-07 17:44:04', '2023-02-07 17:44:04'),
-(90, 55, 'Fruits & Vegetables', 'en', '2023-02-07 17:46:30', '2023-02-07 17:46:30'),
-(91, 56, 'Meat & Fish', 'en', '2023-02-07 17:47:56', '2023-02-07 17:47:56'),
-(92, 64, 'Baking', 'en', '2023-02-07 18:06:38', '2023-02-07 18:06:38'),
-(93, 58, 'Sauces & Pickles', 'en', '2023-02-07 18:07:15', '2023-02-07 18:07:15'),
-(94, 278, 'Ramadan', 'en', '2023-03-05 15:30:50', '2023-03-05 15:41:31'),
-(95, 279, 'Home Appliances', 'en', '2024-12-04 12:30:44', '2024-12-10 12:56:47'),
-(96, 280, 'Cloth', 'en', '2024-12-10 12:56:02', '2024-12-10 12:56:02');
 
 -- --------------------------------------------------------
 
@@ -731,105 +718,6 @@ CREATE TABLE `city_warehouse` (
   `warehouse_id` bigint(20) UNSIGNED NOT NULL,
   `city_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `city_warehouse`
---
-
-INSERT INTO `city_warehouse` (`warehouse_id`, `city_id`) VALUES
-(1, 7),
-(1, 49),
-(1, 1),
-(1, 3),
-(1, 2),
-(1, 4),
-(1, 6),
-(1, 8),
-(1, 9),
-(1, 10),
-(1, 11),
-(1, 12),
-(1, 13),
-(1, 14),
-(1, 15),
-(1, 16),
-(1, 17),
-(1, 18),
-(1, 19),
-(1, 20),
-(1, 21),
-(1, 22),
-(1, 23),
-(1, 24),
-(1, 25),
-(1, 26),
-(1, 27),
-(1, 28),
-(1, 29),
-(1, 30),
-(1, 31),
-(1, 32),
-(1, 33),
-(1, 34),
-(1, 35),
-(1, 36),
-(1, 37),
-(1, 38),
-(1, 39),
-(1, 40),
-(1, 41),
-(1, 42),
-(1, 43),
-(1, 44),
-(1, 45),
-(1, 46),
-(1, 47),
-(1, 48),
-(1, 50),
-(1, 51),
-(1, 52),
-(1, 53),
-(1, 54),
-(1, 55),
-(1, 56),
-(1, 57),
-(1, 58),
-(1, 59),
-(1, 60),
-(1, 61),
-(1, 62),
-(1, 63),
-(1, 64),
-(1, 65),
-(1, 66),
-(1, 67),
-(1, 68),
-(1, 69),
-(1, 70),
-(1, 71),
-(1, 72),
-(1, 73),
-(1, 74),
-(1, 75),
-(1, 76),
-(1, 77),
-(1, 78),
-(1, 79),
-(1, 80),
-(1, 81),
-(1, 82),
-(1, 83),
-(1, 84),
-(1, 85),
-(1, 86),
-(1, 87),
-(1, 88),
-(1, 89),
-(1, 90),
-(1, 91),
-(1, 92),
-(1, 93),
-(1, 94);
 
 -- --------------------------------------------------------
 
@@ -1086,15 +974,6 @@ CREATE TABLE `commission_histories` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
---
--- Dumping data for table `commission_histories`
---
-
-INSERT INTO `commission_histories` (`id`, `order_id`, `order_detail_id`, `seller_id`, `admin_commission`, `seller_earning`, `created_at`, `updated_at`) VALUES
-(1, 4, 4, 12, 0.00, 50.00, '2022-03-03 17:06:16', '2022-03-03 17:06:16'),
-(2, 5, 5, 12, 0.00, 50.00, '2022-03-03 21:42:40', '2022-03-03 21:42:40'),
-(3, 10, 10, 41, 0.00, 5.00, '2022-03-06 13:28:06', '2022-03-06 13:28:06');
-
 -- --------------------------------------------------------
 
 --
@@ -1111,13 +990,6 @@ CREATE TABLE `conversations` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-
---
--- Dumping data for table `conversations`
---
-
-INSERT INTO `conversations` (`id`, `sender_id`, `receiver_id`, `title`, `sender_viewed`, `receiver_viewed`, `created_at`, `updated_at`) VALUES
-(1, 9, 9, 'Zinzal', 1, 0, '2022-03-02 10:57:54', '2022-03-02 10:57:54');
 
 -- --------------------------------------------------------
 
@@ -1161,16 +1033,6 @@ CREATE TABLE `coupons` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-
---
--- Dumping data for table `coupons`
---
-
-INSERT INTO `coupons` (`id`, `user_id`, `type`, `code`, `details`, `discount`, `discount_type`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES
-(4, 9, 'cart_base', 'CORPORATE01', '{\"min_buy\":\"499\",\"max_discount\":\"100000\"}', 4.00, 'percent', 1661882400, 1693418400, '2022-08-31 15:38:19', '2022-08-31 15:38:19'),
-(6, 9, 'cart_base', 'XCADET22', '{\"min_buy\":\"299\",\"max_discount\":\"1000\"}', 5.00, 'percent', 1662228000, 1703959200, '2022-09-04 18:11:31', '2022-09-04 18:24:35'),
-(7, 9, 'cart_base', 'CURETECH04', '{\"min_buy\":\"199\",\"max_discount\":\"500\"}', 4.00, 'percent', 1662314400, 1693850400, '2022-09-05 13:32:46', '2022-09-15 15:17:17'),
-(8, 9, 'cart_base', 'Muslim Town05', '{\"min_buy\":\"299\",\"max_discount\":\"299\"}', 5.00, 'percent', 1663783200, 1698343200, '2022-09-22 20:56:07', '2022-11-01 16:43:34');
 
 -- --------------------------------------------------------
 
@@ -1561,22 +1423,6 @@ CREATE TABLE `flash_deal_products` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
---
--- Dumping data for table `flash_deal_products`
---
-
-INSERT INTO `flash_deal_products` (`id`, `flash_deal_id`, `product_id`, `discount`, `discount_type`, `created_at`, `updated_at`) VALUES
-(286, 1, 260, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(287, 1, 261, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(288, 1, 262, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(289, 1, 304, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(290, 1, 319, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(291, 1, 320, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(292, 1, 323, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(293, 1, 325, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(294, 1, 339, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19'),
-(295, 1, 340, 0.00, NULL, '2022-05-08 15:10:19', '2022-05-08 15:10:19');
-
 -- --------------------------------------------------------
 
 --
@@ -1613,14 +1459,6 @@ CREATE TABLE `home_categories` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-
---
--- Dumping data for table `home_categories`
---
-
-INSERT INTO `home_categories` (`id`, `category_id`, `subsubcategories`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, '[\"1\"]', 1, '2019-03-12 06:38:23', '2019-03-12 06:38:23'),
-(2, 2, '[\"10\"]', 1, '2019-03-12 06:44:54', '2019-03-12 06:44:54');
 
 -- --------------------------------------------------------
 
@@ -1774,9 +1612,43 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `combined_order_id`, `user_id`, `guest_id`, `seller_id`, `assign_delivery_boy`, `shipping_address`, `shipping_type`, `shipping_cost`, `pickup_point_id`, `delivery_status`, `payment_type`, `payment_status`, `payment_details`, `grand_total`, `coupon_discount`, `code`, `tracking_code`, `manage_by`, `date`, `viewed`, `delivery_viewed`, `cancel_request`, `cancel_request_at`, `payment_status_viewed`, `commission_calculated`, `delivery_history_date`, `created_at`, `updated_at`, `reason`, `delivery_time`, `ordered_from`, `refund_details`, `delivery_slot`, `preferred_delivery_date`, `points_accrued`, `points_redeem`, `reward_discount`, `applied_coupon_code`, `latitude`, `longitude`, `city_id`, `referral_code`, `paid_amount`, `due_amount`, `is_b2b_order`, `created_by`, `invoice_number`, `is_emergency_order`) VALUES
-(4496, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Salim Hosen\",\"address\":\"dhaka, bangladesh\",\"phone\":\"01762473884\"}', 'delivery', 40, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 166.00, 0.00, '104496', '5544', NULL, 1733809842, 0, 1, 0, NULL, 1, 0, '2024-12-10 05:50:42', '2024-12-10 05:50:42', '2024-12-10 05:50:42', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
-(4497, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Salim Hosen\",\"address\":\"dhaka, bangladesh\",\"phone\":\"01762473884\"}', 'delivery', 40, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 1960.00, 0.00, '104497', '8705', NULL, 1733825445, 0, 1, 0, NULL, 1, 0, '2024-12-10 10:10:45', '2024-12-10 16:10:45', '2024-12-10 16:10:45', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
-(4498, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Salim Hosen\",\"address\":\"dhaka, bangladesh\",\"phone\":\"01762473884\"}', 'delivery', 40, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 1960.00, 0.00, '104498', '2837', NULL, 1733828838, 0, 1, 0, NULL, 1, 0, '2024-12-10 11:07:18', '2024-12-10 17:07:18', '2024-12-10 17:07:18', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0);
+(1, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Monir Hossain\",\"address\":\"MCC Tower Level 7. House 76.Road 127.Gulshan Avenue. Gulshan-1 Dhaka.\",\"phone\":\"01633950636\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 460.00, 0.00, '100001', '9434', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(2, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Sazzad\",\"address\":\"Puraton bahadur bajar, dinajpur\",\"phone\":\"01723313735\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 480.00, 0.00, '100002', '7113', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(3, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Dr. Shetu\",\"address\":\"check post, rangpur\",\"phone\":\"01300157359\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 480.00, 0.00, '100003', '4033', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(4, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Mohammad Redwan\",\"address\":\"Hemayet pur, joyna bari madrasa road\",\"phone\":\"01333393558\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100004', '5608', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(5, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Belal Hosain\",\"address\":\"Tazumuddin Haque Road, Bhola\",\"phone\":\"01756641181\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 300.00, 0.00, '100005', '7899', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(6, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Tahmina zahan\",\"address\":\"Feni mohipal temuhani\",\"phone\":\"01706114609\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 1100.00, 0.00, '100006', '5174', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(7, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Qari Monir Hossein\",\"address\":\"Nangalkot Police Station, Volain Bazar\",\"phone\":\"01884283124\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100007', '5429', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(8, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Siam Admad\",\"address\":\"Moulvibazar,Juri\",\"phone\":\"1967152807\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100008', '3310', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(9, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Shaid Ahmad\",\"address\":\"Chander kandi, Raipura, Narsindi\",\"phone\":\"1925179230\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 300.00, 0.00, '100009', '3202', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(10, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Md Touhid\",\"address\":\"TIC colony, Sector 4, Uttara\",\"phone\":\"01804665531\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100010', '2889', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(11, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"MD Safwaan Saad\",\"address\":\"House-2, Rd-9, Block-C, Bosila City Developer Housing(near bosila bridge), Mohammadpur, Dhaka\",\"phone\":\"01753545456\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100011', '8896', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(12, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Faria Islam\",\"address\":\"Curetech Ltd., Shagufta Tower\",\"phone\":\"01711815400\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 4500.00, 0.00, '100012', '6544', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(13, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Tasmin Ahmed\",\"address\":\"Shagufta tower, Curetechbd,  Gulshan Badda Link road\",\"phone\":\"01722065374\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 500.00, 0.00, '100013', '3259', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(14, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Nafis Noor\",\"address\":\"Keraniganj,Dhaka\",\"phone\":\"01876856860\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100014', '1363', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(15, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Apple Mahmud\",\"address\":\"Shagufta tower, Curetechbd,  Gulshan Badda Link road\",\"phone\":\"01726014285\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 2000.00, 0.00, '100015', '7344', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(16, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Apple Mahmud\",\"address\":\"Shagufta tower, Curetechbd,  Gulshan Badda Link road\",\"phone\":\"01726014285\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 300.00, 0.00, '100016', '5942', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(17, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Sayid mirza\",\"address\":\"Shagufta tower, Curetechbd,  Gulshan Badda Link road\",\"phone\":\"01711555645\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 2000.00, 0.00, '100017', '1474', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(18, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Risad Mahmud\",\"address\":\"Tower Hamlet, 16 Kemal Ataturk Avenue, Banani, dhaka-1213( Al-Arafah islami bank, banani branch, 2nd floor)\",\"phone\":\"01941196277\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100018', '5647', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(19, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Alsarafat Ullah\",\"address\":\"Hajiganj Rajargaon bazar\",\"phone\":\"01837106084\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100019', '3300', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(20, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Sagor\",\"address\":\"Faridpur sadarpur\",\"phone\":\"01321794437\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100020', '3303', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(21, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Al Amin Ahsan\",\"address\":\"Rajshahi, Chapai Nawabganj, Nachol, Nizampur Islami Bank(ground floor)\",\"phone\":\"01614357236\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100021', '1452', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(22, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"RS Al-amin\",\"address\":\"Botbazar gacha road\",\"phone\":\"01724121069\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100022', '5451', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(23, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Alomgir Patowary\",\"address\":\"Ambagan, Matirangga, Khagrachari\",\"phone\":\"01862020259\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 500.00, 0.00, '100023', '4242', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(24, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Ashraf \",\"address\":\"61 sikkatuli lean nazira bazar bangshal Dhaka near sikkatuli park \",\"phone\":\"01675787111\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100024', '5532', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(25, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Mohammad Mehedi Hasan\",\"address\":\"Curetech Office\",\"phone\":\"01614265425\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 500.00, 0.00, '100025', '3306', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(26, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Hm Habibullah Redoan \",\"address\":\"Dhaka centonment Balu ghat.  Baron tek\",\"phone\":\"01742900864 \"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100026', '4306', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(27, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Siam \",\"address\":\"kalihati, Tangail\",\"phone\":\"01325238314\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 500.00, 0.00, '100027', '4619', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(28, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Md. Durul Huda\",\"address\":\"teacher ferdous Alam Firoj High School, Firoj Nagar Gandina, Kalihati, Tangail\",\"phone\":\"01871495034\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100028', '1886', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(29, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Faruk\",\"address\":\"D\\/s:chittagong, Thana: mirshari, Village:mithanala, Union: 10 number bot office \",\"phone\":\"01829089472\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100029', '8772', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(30, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"\\u09a4\\u09be\\u09b0\\u09c7\\u0995 \\u09ae\\u09be\\u09b9\\u09ae\\u09c1\\u09a6\",\"address\":\"\\u0997\\u09cd\\u09b0\\u09be\\u09ae \\u0997\\u09be\\u099c\\u09bf\\u09b0 \\u0995\\u09be\\u09a8\\u09cd\\u09a6\\u09bf \\u0987\\u0989\\u09a8\\u09bf\\u09df\\u09a8 \\u0995\\u09c3\\u09b7\\u09cd\\u09a3 \\u09a8\\u0997\\u09b0 \\u09a5\\u09be\\u09a8\\u09be \\u09a8\\u09ac\\u09c0\\u09a8\\u0997\\u09b0 \\u099c\\u09c7\\u09b2\\u09be \\u09ac\\u09cd\\u09b0\\u09be\\u0995\\u09cd\\u09b7\\u09a3\\u09ac\\u09be\\u09dc\\u09bf\\u09df\\u09be \",\"phone\":\"01646376749\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 600.00, 0.00, '100030', '7945', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(31, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Salim Hosen\",\"address\":\"dhaka, bangladesh\",\"phone\":\"01762473884\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 200.00, 0.00, '100031', '5317', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(32, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"\\u09ae\\u09cb: \\u09ae\\u09be\\u09b9\\u09ae\\u09c1\\u09a6\\u09c1\\u09b2 \\u09b9\\u09be\\u09b8\\u09be\\u09a8 \\u09b8\\u09be\'\\u09a6\",\"address\":\"\\u0997\\u09cd\\u09b0\\u09be\\u09ae :\\u09a8\\u0993\\u09a6\\u09be\\u09aa\\u09be\\u09dc\\u09be \\u09b9\\u09be\\u09ab\\u09bf\\u099c\\u09bf\\u09df\\u09be \\u09ae\\u09be\\u09a6\\u09cd\\u09b0\\u09be\\u09b8\\u09be, \\u0986\\u099f\\u0998\\u09b0\\u09bf\\u09df\\u09be, \\u09aa\\u09be\\u09ac\\u09a8\\u09be\\u0964\",\"phone\":\"01991674949\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100032', '6613', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(33, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Faria Islam\",\"address\":\"Curetech Ltd., Shagufta Tower\",\"phone\":\"01711815400\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 200.00, 0.00, '100033', '4910', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(34, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Falguni Ahmmad Kaira\",\"address\":\"Sagufta Tower, House- TA136, (1st Floor), Gulshan Badda Link Road, Dhaka 1212\",\"phone\":\"01757471130\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 200.00, 0.00, '100034', '4391', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(35, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Md Muaj\",\"address\":\"Chormonay, Barishal\",\"phone\":\" 01971751799\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 550.00, 0.00, '100035', '7082', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(36, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Rouzatul Jannat\",\"address\":\"Road 20, House 33, Rupnagar R\\/A, Mirpur, Dhaka 1216\",\"phone\":\"01791913417\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 500.00, 0.00, '100036', '1451', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0),
+(37, NULL, NULL, NULL, NULL, NULL, '{\"name\":\"Mariya \",\"address\":\"Titas Cumilla , Batakandi Bajar Subuj Banglar samne\",\"phone\":\"01703933945\"}', 'delivery', 0, 0, 'pending', 'cash_on_delivery', 'unpaid', NULL, 380.00, 0.00, '100037', '3950', NULL, 1735218174, 0, 1, 0, NULL, 1, 0, '2024-12-26 13:02:54', '2024-12-26 13:02:54', '2024-12-26 13:02:54', NULL, NULL, 'web', NULL, NULL, NULL, 0, 0, 0.00, NULL, NULL, NULL, NULL, NULL, 0.00, 0.00, 0, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -1813,7 +1685,46 @@ INSERT INTO `order_details` (`id`, `order_id`, `seller_id`, `product_id`, `varia
 (7310, 4497, 9, 8534, NULL, 480.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-10 16:10:45', '2024-12-10 16:10:45'),
 (7311, 4497, 9, 8535, NULL, 1440.00, 0.00, 0.00, 3, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-10 16:10:45', '2024-12-10 16:10:45'),
 (7312, 4498, 9, 8534, NULL, 480.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-10 17:07:18', '2024-12-10 17:07:18'),
-(7313, 4498, 9, 8535, NULL, 1440.00, 0.00, 0.00, 3, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-10 17:07:18', '2024-12-10 17:07:18');
+(7313, 4498, 9, 8535, NULL, 1440.00, 0.00, 0.00, 3, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-10 17:07:18', '2024-12-10 17:07:18'),
+(7314, 4499, 9, 8535, NULL, 480.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-12 08:19:19', '2024-12-12 08:19:19'),
+(7315, 4499, 9, 8537, NULL, 980.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-12 08:19:19', '2024-12-12 08:19:19'),
+(7316, 1, 1, 2, NULL, 460.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7317, 2, 1, 2, NULL, 480.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7318, 3, 1, 2, NULL, 480.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7319, 4, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7320, 5, 1, 3, NULL, 300.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7321, 6, 1, 3, NULL, 1100.00, 0.00, 0.00, 2, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7322, 7, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7323, 8, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7324, 9, 1, 3, NULL, 300.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7325, 10, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7326, 11, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7327, 12, 1, 5, NULL, 4500.00, 0.00, 0.00, 3, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7328, 13, 1, 5, NULL, 500.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7329, 14, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7330, 15, 1, 5, NULL, 2000.00, 0.00, 0.00, 2, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7331, 16, 1, 2, NULL, 300.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7332, 17, 1, 5, NULL, 2000.00, 0.00, 0.00, 2, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7333, 18, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7334, 19, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7335, 20, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7336, 21, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7337, 22, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7338, 23, 1, 5, NULL, 500.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7339, 24, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7340, 25, 1, 5, NULL, 500.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7341, 26, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7342, 27, 1, 5, NULL, 500.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7343, 28, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7344, 29, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7345, 30, 1, 5, NULL, 600.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7346, 31, 1, 3, NULL, 200.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7347, 32, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7348, 33, 1, 3, NULL, 200.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7349, 34, 1, 3, NULL, 200.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7350, 35, 1, 5, NULL, 550.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7351, 36, 1, 5, NULL, 500.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54'),
+(7352, 37, 1, 3, NULL, 380.00, 0.00, 0.00, 1, 'unpaid', 'pending', NULL, NULL, NULL, '2024-12-26 13:02:54', '2024-12-26 13:02:54');
 
 -- --------------------------------------------------------
 
@@ -3349,7 +3260,9 @@ INSERT INTO `price_histories` (`id`, `user_id`, `product_id`, `price`, `notes`, 
 (1732, 9, 8535, '0', NULL, '2024-12-10 13:00:31', '2024-12-10 13:00:31'),
 (1733, 9, 8536, '0', NULL, '2024-12-10 13:03:02', '2024-12-10 13:03:02'),
 (1734, 9, 8537, '980', NULL, '2024-12-10 13:04:13', '2024-12-10 13:04:13'),
-(1735, 9, 8538, '599', NULL, '2024-12-10 13:11:04', '2024-12-10 13:11:04');
+(1735, 9, 8538, '599', NULL, '2024-12-10 13:11:04', '2024-12-10 13:11:04'),
+(1736, 9, 8539, '800', NULL, '2024-12-19 17:56:30', '2024-12-19 17:56:30'),
+(1737, 1, 16, '199', NULL, '2025-01-05 11:22:06', '2025-01-05 11:22:06');
 
 -- --------------------------------------------------------
 
@@ -3433,11 +3346,32 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `added_by`, `user_id`, `category_id`, `brand_id`, `photos`, `thumbnail_img`, `video_provider`, `video_link`, `tags`, `description`, `unit_price`, `purchase_price`, `variant_product`, `attributes`, `choice_options`, `colors`, `variations`, `todays_deal`, `published`, `approved`, `stock_visibility_state`, `cash_on_delivery`, `featured`, `seller_featured`, `current_stock`, `unit`, `min_qty`, `max_qty`, `low_stock_quantity`, `discount`, `discount_type`, `discount_start_date`, `discount_end_date`, `tax`, `tax_type`, `shipping_type`, `shipping_cost`, `is_quantity_multiplied`, `est_shipping_days`, `num_of_sale`, `meta_title`, `meta_description`, `meta_img`, `pdf`, `slug`, `earn_point`, `refundable`, `rating`, `barcode`, `digital`, `auction_product`, `file_name`, `file_path`, `external_link`, `external_link_btn`, `wholesale_product`, `weight`, `created_at`, `updated_at`, `unit_value`, `banner_img`, `free_shipping`, `sku`, `clink`, `batch_id`, `is_b2b_product`) VALUES
-(8534, 'সাদা কাপ', 'admin', 9, 279, NULL, NULL, '11180', NULL, NULL, '', NULL, 480.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 98, 'pcs', 1, 1, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 2, 'সাদা কাপ', '', NULL, NULL, 'sada-kap', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 12:57:32', '2024-12-10 17:07:18', 1, NULL, 0, NULL, NULL, NULL, 0),
-(8535, 'কোরাল পিংক মগ', 'admin', 9, 279, NULL, NULL, '11179', NULL, NULL, '', NULL, 480.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 94, 'pcs', 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 6, 'কোরাল পিংক মগ', '', NULL, NULL, 'koral-pingk-mg', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:00:31', '2024-12-10 17:07:18', 1, NULL, 0, NULL, NULL, NULL, 0),
-(8536, 'ফোন কভার', 'admin', 9, 279, NULL, NULL, '11178', NULL, NULL, '', NULL, 380.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 100, 'pcs', 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'ফোন কভার', '', NULL, NULL, 'fon-kvar', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:03:02', '2024-12-10 13:06:33', 1, NULL, 0, NULL, NULL, NULL, 0),
-(8537, 'বেসিল গ্রীন মগ সেট', 'admin', 9, 279, NULL, NULL, '11177', NULL, NULL, '', NULL, 980.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 100, 'pcs', 1, 100, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'বেসিল গ্রীন মগ সেট', '', NULL, NULL, 'besil-green-mg-set', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:04:13', '2024-12-10 13:06:26', 1, NULL, 0, NULL, NULL, NULL, 0),
-(8538, 'সুয়েট জাম্পার', 'admin', 9, 280, NULL, NULL, '11181', NULL, NULL, '', NULL, 599.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 100, NULL, 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'সুয়েট জাম্পার', '', NULL, NULL, 'suyet-jampar', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:11:04', '2024-12-10 13:11:04', 1, NULL, 0, NULL, NULL, NULL, 0);
+(1, 'White Cup, you are my world', 'admin', 9, 281, NULL, NULL, '11180', NULL, NULL, '', NULL, 299.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 98, 'pcs', 1, 1, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 2, 'White Cup, you are my world', '', NULL, NULL, 'white-cup-you-are-my-world', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 12:57:32', '2025-01-05 11:07:05', 1, NULL, 0, NULL, NULL, NULL, 0),
+(2, 'Pink Cup, you are my ❤️', 'admin', 9, 281, NULL, NULL, '11184', NULL, NULL, '', NULL, 299.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 93, 'pcs', 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 7, 'Pink Cup, you are my ❤️', '', NULL, NULL, 'pink-cup-you-are-my-love', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:00:31', '2025-01-05 11:06:52', 1, NULL, 0, NULL, NULL, NULL, 0),
+(3, 'Phone cover (proud muslim)', 'admin', 9, 281, NULL, NULL, '11185', NULL, NULL, '', NULL, 199.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 100, 'pcs', 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'Phone cover, proud muslim', '', NULL, NULL, 'phone-cover-proud-muslim', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:03:02', '2025-01-05 11:22:43', 1, NULL, 0, NULL, NULL, NULL, 0),
+(4, 'Green Cup x 3', 'admin', 9, 281, NULL, NULL, '11177', NULL, NULL, '', NULL, 899.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 99, 'set', 1, 100, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 1, 'Green Cup x 3', '', NULL, NULL, 'green-cup-x-3', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:04:13', '2025-01-05 11:06:22', 1, NULL, 0, NULL, NULL, NULL, 0),
+(5, 'Sweat Jumper (Black or White)', 'admin', 9, 281, NULL, NULL, '11181', NULL, NULL, '', NULL, 499.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 100, 'pcs', 1, 5, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'সুয়েট জাম্পার', '', NULL, NULL, 'sweat-jumper-3', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-10 13:11:04', '2025-01-05 12:53:16', 1, NULL, 0, NULL, NULL, NULL, 0),
+(6, 'Hudi (Black)', 'admin', 9, 281, NULL, NULL, '11182', NULL, NULL, 'hudi', NULL, 699.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 500, 'pcs', 1, 10, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'Hudi (Black)', '', NULL, NULL, 'hudi-black', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-19 17:56:30', '2025-01-05 11:17:52', 1, NULL, 0, NULL, NULL, NULL, 0),
+(7, 'Shal (Chaina)', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 9, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'shal-chaina', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '7', NULL, NULL, 0),
+(8, 'Shal (Bangla))', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 3, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'shal-bangla', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '8', NULL, NULL, 0),
+(9, 'Green Mug (Akij)', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 250, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'green-mug-akij', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '3', NULL, NULL, 0),
+(10, 'Pink Mug (Akij)', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 250, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'pink-mug-akij', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '2', NULL, NULL, 0),
+(11, 'Sweat Jumper (Black)', 'admin', 1, 281, NULL, NULL, '11181', NULL, NULL, '', NULL, 799.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 5, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'Sweat Jumper (Black)', '', NULL, NULL, 'sweat-jumper-black', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2025-01-05 11:17:28', 1, NULL, 0, '9', NULL, NULL, 0),
+(12, 'T-Shirt (Free Palestine)', 'admin', 1, 281, NULL, NULL, '11183', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 90, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-Shirt (Free Palestine)', '', NULL, NULL, 't-shirt-free-palestine', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2025-01-05 12:07:25', 1, NULL, 0, '11', NULL, NULL, 0),
+(13, 'T-shirt (Guli Kori More 1 ta)', 'admin', 1, 281, NULL, NULL, '11191', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Guli Kori More 1 ta)', '', NULL, NULL, 't-shirt-guli-kori-more-1-ta', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2025-01-05 12:11:25', 1, NULL, 0, '12', NULL, NULL, 0),
+(14, 'Pillow cover', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 58, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'pillow-cover', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '13', NULL, NULL, 0),
+(15, 'Table mat', 'admin', 1, 1, NULL, NULL, NULL, NULL, NULL, '', NULL, 100.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 0, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, NULL, NULL, NULL, NULL, 'table-mat', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2024-12-30 08:20:13', '2024-12-30 08:20:13', 1, NULL, 0, '14', NULL, NULL, 0),
+(16, 'Phone cover (hadith)', 'admin', 1, 281, NULL, NULL, '11186', NULL, NULL, '', NULL, 199.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 41, NULL, 1, 10, 1, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'Phone Cover, Hadith', '', NULL, NULL, 'phone-cover-hadith', 0.00, 1, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 11:22:06', '2025-01-05 11:22:06', 1, NULL, 0, NULL, NULL, NULL, 0),
+(17, 'T-Shirt (Murubbi, Murubbi)', 'admin', 1, 281, NULL, NULL, '11188', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 90, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-Shirt (Murubbi, Murubbi)', '', NULL, NULL, 't-shirt-murubbi-murubbi', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:22:49', 1, NULL, 0, '11', NULL, NULL, 0),
+(18, 'T-shirt (Rakhiyo Tomar Moner Aynaghore)', 'admin', 1, 281, NULL, NULL, '11187', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Rakhiyo Tomar Moner Aynaghore)', '', NULL, NULL, 't-shirt-rakhiyo-tomar-moner-aynaghore', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:23:19', 1, NULL, 0, '12', NULL, NULL, 0),
+(19, 'T-shirt (Shutup India)', 'admin', 1, 281, NULL, NULL, '11189', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Shutup India)', '', NULL, NULL, 't-shirt-shutup-india', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:23:41', 1, NULL, 0, '12', NULL, NULL, 0),
+(20, 'T-shirt (Quran is the Constitution)', 'admin', 1, 281, NULL, NULL, '11192', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Quran is the Constitution)', '', NULL, NULL, 't-shirt-quran-is-the-constitution', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:24:30', 1, NULL, 0, '12', NULL, NULL, 0),
+(21, 'T-shirt (I am Proud Muslim)', 'admin', 1, 281, NULL, NULL, '11193', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (I am Proud Muslim)', '', NULL, NULL, 't-shirt-i-am-proud-muslim', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:25:03', 1, NULL, 0, '12', NULL, NULL, 0),
+(22, 'T-shirt (Hadith Circle)', 'admin', 1, 281, NULL, NULL, '11196', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Hadith Circle)', '', NULL, NULL, 't-shirt-hadith-circle', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:25:24', 1, NULL, 0, '12', NULL, NULL, 0),
+(23, 'T-shirt (Hidith Line)', 'admin', 1, 281, NULL, NULL, '11195', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Hidith Line)', '', NULL, NULL, 't-shirt-hidith-line', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:27:40', 1, NULL, 0, '12', NULL, NULL, 0),
+(24, 'T-shirt (36 July)', 'admin', 1, 281, NULL, NULL, '11197', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (36 July)', '', NULL, NULL, 't-shirt-36-july', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:27:11', 1, NULL, 0, '12', NULL, NULL, 0),
+(25, 'T-shirt (Ayatul Kursi)', 'admin', 1, 281, NULL, NULL, '11194', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Ayatul Kursi)', '', NULL, NULL, 't-shirt-ayatul-kursi', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:26:50', 1, NULL, 0, '12', NULL, NULL, 0),
+(26, 'T-shirt (Kalma)', 'admin', 1, 281, NULL, NULL, '11190', NULL, NULL, '', NULL, 400.00, NULL, 0, '[]', NULL, NULL, NULL, 0, 1, 1, 'quantity', 1, 0, 0, 12, 'pcs', 1, 10, NULL, 0.00, 'amount', NULL, NULL, 0.00, NULL, 'flat_rate', NULL, 0, NULL, 0, 'T-shirt (Kalma)', '', NULL, NULL, 't-shirt-kalma', 0.00, 0, 0.00, NULL, 0, 0, NULL, NULL, NULL, 'Buy Now', 0, NULL, '2025-01-05 12:22:13', '2025-01-05 12:26:25', 1, NULL, 0, '12', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -31577,7 +31511,8 @@ INSERT INTO `translations` (`id`, `lang`, `lang_key`, `lang_value`, `created_at`
 (27702, 'en', 'delivery_subscription_activation', 'Delivery Subscription Activation', '2023-04-30 09:40:23', '2023-04-30 09:40:23'),
 (27703, 'en', 'cd_link', 'CD Link', '2023-05-02 09:55:35', '2023-05-02 09:55:35'),
 (27704, 'en', 'paid_with_emergency_balance', 'Paid with Emergency Balance', '2023-05-03 06:21:32', '2023-05-03 06:21:32'),
-(27705, 'en', 'tajabajar_products', 'TajaBajar Products', '2024-12-10 12:57:33', '2024-12-10 12:57:33');
+(27705, 'en', 'tajabajar_products', 'TajaBajar Products', '2024-12-10 12:57:33', '2024-12-10 12:57:33'),
+(27706, 'en', 'mt_products', 'MT Products', '2024-12-12 08:19:50', '2024-12-12 08:19:50');
 
 -- --------------------------------------------------------
 
@@ -31604,11 +31539,27 @@ CREATE TABLE `uploads` (
 --
 
 INSERT INTO `uploads` (`id`, `file_original_name`, `file_name`, `user_id`, `file_size`, `extension`, `type`, `external_link`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(11177, '3greenmugs', 'uploads/all/WnQ9U1udQd5FujCktCNwo90jItkaXAKeKcPVn7XV.jpg', 9, 203742, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
-(11178, 'Phone cover', 'uploads/all/mOVTz6xFvjAn5LUoXtz6p3mWJyufzjQnSkfPxUwk.jpg', 9, 190534, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
-(11179, 'Coral pink mug', 'uploads/all/x1NGkmhwORsV0m1fKAgLSv3QUIDIRFpbBaHI1vUv.jpg', 9, 240999, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
-(11180, 'whitemug', 'uploads/all/SByBd6H06qMQ8vCK9Zw9GUYRKKO9w5SpJL6UVSbJ.jpg', 9, 387063, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
-(11181, '468951862_617093904224074_5444866650411105460_n', 'uploads/all/pmFS8XJIKjSifsbx4jHRuiP5ZlW7565bYS3vjzkO.jpg', 9, 50976, 'jpg', 'image', NULL, '2024-12-10 13:10:43', '2024-12-10 13:10:43', NULL);
+(11177, '3greenmugs', 'uploads/all/WnQ9U1udQd5FujCktCNwo90jItkaXAKeKcPVn7XV.jpg', 1, 203742, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
+(11178, 'Phone cover', 'uploads/all/mOVTz6xFvjAn5LUoXtz6p3mWJyufzjQnSkfPxUwk.jpg', 1, 190534, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
+(11179, 'Coral pink mug', 'uploads/all/x1NGkmhwORsV0m1fKAgLSv3QUIDIRFpbBaHI1vUv.jpg', 1, 240999, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
+(11180, 'whitemug', 'uploads/all/SByBd6H06qMQ8vCK9Zw9GUYRKKO9w5SpJL6UVSbJ.jpg', 1, 387063, 'jpg', 'image', NULL, '2024-12-10 12:53:58', '2024-12-10 12:53:58', NULL),
+(11181, '468951862_617093904224074_5444866650411105460_n', 'uploads/all/pmFS8XJIKjSifsbx4jHRuiP5ZlW7565bYS3vjzkO.jpg', 1, 50976, 'jpg', 'image', NULL, '2024-12-10 13:10:43', '2024-12-10 13:10:43', NULL),
+(11182, 'WhatsApp Image 2024-12-19 at 23.40.58_9f91cfc5', 'uploads/all/WIpH1G68pj7FkpzO3fuOJr9tciSWMFIbXNU0Vom6.jpg', 1, 210976, 'jpg', 'image', NULL, '2024-12-19 17:56:08', '2024-12-19 17:56:08', NULL),
+(11183, 'tshirt-9(white)', 'uploads/all/SGq7KRckIukEFgAHC3M1fqnTDZ6Uk8yRD8QbItFF.png', 1, 298014, 'png', 'image', NULL, '2024-12-30 08:23:09', '2024-12-30 08:23:09', NULL),
+(11184, 'Coral Pink Mug(love)', 'uploads/all/RSUW3AVvQw5q6qRv4pWPNMwtkbdz3CTGaiXF6P5O.jpg', 1, 188228, 'jpg', 'image', NULL, '2025-01-05 09:00:46', '2025-01-05 09:00:46', NULL),
+(11185, '_MG_1633-41', 'uploads/all/CsK5xdLBTnZpP6PevyKbhpndmEoj98StrY5hPtc5.png', 1, 240288, 'png', 'image', NULL, '2025-01-05 11:20:19', '2025-01-05 11:20:19', NULL),
+(11186, '_MG_1628-43', 'uploads/all/y1mArbEciW4CDIRwFZSFD8m2ZlKIRINGxTBdhrgv.png', 1, 238443, 'png', 'image', NULL, '2025-01-05 11:20:19', '2025-01-05 11:20:19', NULL),
+(11187, 'rakhiyo tmar moner aynaghore tshirt(white)', 'uploads/all/CiWWecE8Ybjyfsc8v9Gf7wNTvRvv0f49VVJIfURH.png', 1, 508890, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11188, 'Murobbi-tshirt(white)', 'uploads/all/HRtp6VokR7OCARYAKXC63W9dZjvMvAakPPd2wAEM.png', 1, 513626, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11189, 'shutup-indiatshirt(white)', 'uploads/all/YJxpDWhObZXeH1VLNrqPS0iTbUxKP9XqTpSWlzxu.png', 1, 504859, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11190, 'tshirt-4(white)', 'uploads/all/X0z5gDbS5HV9TKmf0KuN24vst3Fu4ycxCXgXPPeL.png', 1, 502991, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11191, 'gulo-kori-more--1ta-tshirt', 'uploads/all/VPYgyg3pOijWtU8iMEc9WRxChP5Ao8x1PtVWb3hD.png', 1, 508950, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11192, 'tshirt-2(white)', 'uploads/all/IuUhAAuitqdXx0IqxSIynUAMFIAlznLQXrZkgzN6.png', 1, 505760, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11193, 'tshirt-3(white)', 'uploads/all/t9eHbbg4FabtQp1PoUCLdfarO0Wrhkgs3fWg57hy.png', 1, 504786, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11194, 'tshirt-5(white)', 'uploads/all/rVKwLGH2wYPfODonZ1W8Yp5h477MondGSwcbtvTh.png', 1, 512671, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11195, 'tshirt-7(white)', 'uploads/all/esd3SQ7v6XfWGCXChun9qC6zfDtumYjXwyhR1gNp.png', 1, 502368, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11196, 'tshirt-8(white)', 'uploads/all/8WQbzGtLySC9HVPtaeRc0Lmkl8dxS0fYlwUFe0kw.png', 1, 517982, 'png', 'image', NULL, '2025-01-05 12:04:28', '2025-01-05 12:04:28', NULL),
+(11197, 'tshirt-6(white)', 'uploads/all/p7OQneooFS68acX3lE9FfE43DsMxZSbYSCo1nQnL.png', 1, 508543, 'png', 'image', NULL, '2025-01-05 12:04:29', '2025-01-05 12:04:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -31657,7 +31608,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `email`, `email_verified_at`, `verification_code`, `new_email_verificiation_code`, `password`, `remember_token`, `device_token`, `avatar`, `avatar_original`, `address`, `country`, `state`, `city`, `postal_code`, `phone`, `balance`, `banned`, `referral_code`, `is_verified`, `customer_package_id`, `remaining_uploads`, `created_at`, `updated_at`, `points`, `is_new_user`, `is_b2b_user`, `lock_emergency`, `delivery_subscription`) VALUES
-(9, NULL, NULL, 'admin', 'Admin', 'admin@muslim.town', '2022-02-23 23:02:29', NULL, NULL, '$2a$12$FvCtbf.8CK7vbre/K0v75.J7xpj9aKLHeHdNz04NFq4WxQN22XZ1G', 'GPKVqhCnyS8FQOa4uxFG3GeL6Oi1TX0aTReBSqFeXNbzFbG9EyJw1T2KRnme', NULL, NULL, '28', NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, 'NMEzKPxJ', 1, NULL, 0, '2022-02-23 23:37:29', '2023-01-09 16:28:47', 780, 0, NULL, 0, 0);
+(1, NULL, NULL, 'admin', 'Admin', 'admin@muslim.town', '2022-02-23 23:02:29', NULL, NULL, '$2a$12$FvCtbf.8CK7vbre/K0v75.J7xpj9aKLHeHdNz04NFq4WxQN22XZ1G', 'wUxtL8QfqVojd0V7PMvl5AMXwh6tqYurJChW3jWRLfTcqkfZ5HhA6YCx5lD7', NULL, NULL, '28', NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, 'NMEzKPxJ', 1, NULL, 0, '2022-02-23 23:37:29', '2023-01-09 16:28:47', 780, 0, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -31707,13 +31658,6 @@ CREATE TABLE `warehouses` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `warehouses`
---
-
-INSERT INTO `warehouses` (`id`, `name`, `address`, `state_id`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES
-(1, 'Badda', 'Badda Link Road', 1, 23.78055950, 90.42199470, '2022-11-16 06:23:42', '2022-11-23 02:21:12');
 
 -- --------------------------------------------------------
 
@@ -32351,7 +32295,7 @@ ALTER TABLE `addons`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3621;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `app_translations`
@@ -32423,13 +32367,13 @@ ALTER TABLE `business_settings`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48491;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48515;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
 
 --
 -- AUTO_INCREMENT for table `category_translations`
@@ -32645,13 +32589,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4499;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7314;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7353;
 
 --
 -- AUTO_INCREMENT for table `otp_configurations`
@@ -32699,13 +32643,13 @@ ALTER TABLE `pickup_point_translations`
 -- AUTO_INCREMENT for table `price_histories`
 --
 ALTER TABLE `price_histories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1736;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1738;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8539;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `product_stocks`
@@ -32861,13 +32805,13 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27706;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27707;
 
 --
 -- AUTO_INCREMENT for table `uploads`
 --
 ALTER TABLE `uploads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11182;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11198;
 
 --
 -- AUTO_INCREMENT for table `users`
