@@ -35,45 +35,45 @@
 
         <footer class="footer_main_footer container mb-3">
             <hr />
-            <div class="row mt-5">
+            <div class="row mt-5 text-center">
                 <div class="col-md-6 mb-4">
                     <a class="d-block" href="/"><img src="{{ asset('livewire/logo.png') }}" alt="Muslim Town"
                             width="150" /></a>
-                    <div class="footer_brand_text pe-5 mt-3">
-                        <span>Assalamualaikum. Muslim Town helps Muslim families to practice Islamic culture and Akida
+                    <div class="footer_brand_text px-4 mt-3">
+                        <span class="text-black">Assalamualaikum. Muslim Town helps Muslim families to practice Islamic culture and Akida
                             in daily life. Markets are full of western or Indian designed items. We bring Islamic design
                             in our daily used items for families and children. Keep us in your Dua</span>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4 mt-5">
                     <div>
-                        <h6 class="pb-3">Contact Info</h6>
+                        <h6 class="pb-3 text-black">Contact Info</h6>
                         <ul>
                             {{-- <li class="mb-2"><a href="tel:+8809642-778778">Phone: +8809642-778778</a></li> --}}
                             <li class="mb-2"><a href="mailto:support@muslim.town">Email: support@muslim.town</a></li>
                         </ul>
-                        <ul class="d-flex align-items-center mt-3">
-                            <li><a href="https://www.facebook.com/muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/facebook.svg') }}" alt=""
+                        <ul class="d-flex align-items-center justify-content-center mt-3">
+                            <li><a class="d-block w-35px" href="https://www.facebook.com/muslimstown" target="_blank" rel="noreferrer"><img
+                                        src="{{ asset('livewire/facebook.png') }}" alt=""
                                         class="img-fluid" /></a></li>
-                            <li class="mx-3"><a href="https://www.instagram.com/themuslim_town/" target="_blank"
-                                    rel="noreferrer"><img src="{{ asset('livewire/instagram.svg') }}" alt=""
+                            <li class="mx-3"><a class="d-block w-35px" href="https://www.instagram.com/themuslim_town/" target="_blank"
+                                    rel="noreferrer"><img src="{{ asset('livewire/instagram.png') }}" alt=""
                                         class="img-fluid" /></a></li>
-                            <li><a href="https://www.youtube.com/@muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/youtube.svg') }}" alt=""
+                            <li><a class="d-block w-35px" href="https://www.youtube.com/@muslimstown" target="_blank" rel="noreferrer"><img
+                                        src="{{ asset('livewire/youtube.png') }}" alt=""
                                         class="img-fluid" /></a></li>
-                            <li class="mx-3"><a href="https://www.linkedin.com/company/muslimtown/" target="_blank"
-                                    rel="noreferrer"><img src="{{ asset('livewire/linkedin.svg') }}" alt=""
+                            <li class="mx-3"><a class="d-block w-35px" href="https://www.linkedin.com/company/muslimtown/" target="_blank"
+                                    rel="noreferrer"><img src="{{ asset('livewire/linkedin.png') }}" alt=""
                                         class="img-fluid" /></a></li>
-                            <li><a href="https://www.tiktok.com/@muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/tiktok.svg') }}" alt=""
+                            <li><a class="d-block w-35px" href="https://www.tiktok.com/@muslimstown" target="_blank" rel="noreferrer"><img
+                                        src="{{ asset('livewire/tiktok.png') }}" alt=""
                                         class="img-fluid" /></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4 mt-5">
                     <div>
-                        <h6 class="pb-3">Resources</h6>
+                        <h6 class="pb-3 text-black">Resources</h6>
                         <ul>
                             <li class="mb-2"><a wire:navigate href="/page/terms">Terms &amp; Conditions</a></li>
                             <li class="mb-2"><a wire:navigate href="/page/privacy-policy">Privacy Policy</a></li>

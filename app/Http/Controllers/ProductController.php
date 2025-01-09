@@ -432,7 +432,7 @@ class ProductController extends Controller
         $slug .= $slug_suffix;
 
         $product->slug = $slug;
-
+        $product->published = 1;
         // $product->weight = $request->weight;
         // $product->barcode           = $request->barcode;
         // $product->cash_on_delivery = 0;

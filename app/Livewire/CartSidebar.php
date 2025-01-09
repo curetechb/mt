@@ -84,6 +84,11 @@ class CartSidebar extends Component
 
         if(!$cartItem){
 
+            if($product->current_stock <= 0){
+                $this->dispatch("product_error", "Product out of Stock");
+                return;
+            }
+
             $cartItem = Cart::create([
                 "temp_user_id" => $this->temp_id,
                 "product_id" => $product_id,
@@ -97,7 +102,9 @@ class CartSidebar extends Component
                 return;
             }
 
-            if($type == "+" && $product->max_qty && $cartItem->quantity >= $product->max_qty){
+            $max_qty = $product->current_stock < $product->max_qty ? $product->current_stock : $product->max_qty;
+
+            if($type == "+" && $cartItem->quantity >= $max_qty){
 
                 $this->dispatch("product_error", "Your Desired Quantity is Not available for this product");
                 return;

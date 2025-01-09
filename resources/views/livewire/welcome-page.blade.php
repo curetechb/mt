@@ -7,8 +7,8 @@
          <div class="pt-2 container">
             <div class="row">
                <div class="col-md-7 text-center mx-auto promo-text">
-                  <h1 class="h2 main-title mb-2">Assalamualaikum,</h1>
-                  <p class="mb-0">Muslim Town helps Muslim families to practice Islamic culture and Akida in daily life. Markets are full of western or Indian designed items. We bring Islamic design in our daily used items for families and children. Keep us in your Dua.</p>
+                  <h1 class="h2 main-title my-2">Assalamualaikum</h1>
+                  <p class="mb-0 text-black">Muslim Town helps Muslim families to practice Islamic culture and Akida in daily life. Markets are full of western or Indian designed items. We bring Islamic design in our daily used items for families and children. Keep us in your Dua.</p>
                </div>
             </div>
          </div>
@@ -35,8 +35,8 @@
                   <div class="product-grid-container">
                      @foreach ($products as $product)
                            <div class="product-grid-item" wire:key="{{ $product->id }}">
-                              <div class="productcard_productbox">
-                              <a class="productcard_productdetails">
+                              <div class="productcard_productbox" data-id="{{$product->id}}">
+                              <a href="#" class="productcard_productdetails" data-bs-toggle="modal" data-bs-target="#productModal{{$product->id}}">
                                  <div class="productcard_productimg">
                                        <img src="{{api_asset($product->thumbnail_img)}}" alt="Regular Daily Combo" class="img-fluid"></div>
                                  <div class="productcard_productinfo text-center p-2">
@@ -44,7 +44,7 @@
                                        <div>{{ $product->unit_value." ".$product->unit }}</div>
                                        <div>{{ currency_symbol().$product->unit_price }}</div>
                                  </div>
-                                 <div data-bs-toggle="modal" data-bs-target="#productModal{{$product->id}}" class="productcard_productview">
+                                 <div class="productcard_productview d-none d-md-block">
                                        <div class="d-flex align-items-center justify-content-center">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                           <path d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z"></path>
@@ -59,17 +59,26 @@
                                  $in_cart = \App\Models\Cart::where('product_id', $product->id)->where("temp_user_id", $temp_id)->first();
                               @endphp
 
-                              @if (!$in_cart)
-                                 <div class="productcard_productboxbtn productcard_productbtninactive">
-                                    <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+'})" type="button" class="d-block w-100">Add to Bag</button>
+
+                              @if ($product->current_stock <= 0)
+                                 <div class="productcard_productboxbtn productcard_productbtndisable">
+                                    <button disabled type="button" class="d-block w-100">Out of Stock</button>
                                  </div>
                               @else
-                                 <div class="productcard_productboxbtn productcard_productbtnactive">
-                                    <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '-'})" type="button">-</button>
-                                    <button type="button" class="d-block w-100">{{ $in_cart->quantity }} in Box</button>
-                                    <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+'})" type="button">+</button>
-                                 </div>
+                                 @if (!$in_cart)
+                                    <div class="productcard_productboxbtn productcard_productbtninactive">
+                                       <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+'})" type="button" class="d-block w-100">Add to Bag</button>
+                                    </div>
+                                 @else
+                                    <div class="productcard_productboxbtn productcard_productbtnactive">
+                                       <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '-'})" type="button">-</button>
+                                       <button type="button" class="d-block w-100">{{ $in_cart->quantity }} in Bag</button>
+                                       <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+'})" type="button">+</button>
+                                    </div>
+                                 @endif                                  
                               @endif
+
+                              
 
 
 
@@ -79,7 +88,7 @@
                                     <div class="modal-dialog  modal-xl">
                                     <div class="modal-content">
                                        <div class="modal-header">
-                                          <h6 class="modal-title" id="productModalLabel">Product Details</h6>
+                                          <h6 class="modal-title text-black" id="productModalLabel">Product Details</h6>
                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                        </div>
                                        <div class="modal-body">
@@ -94,7 +103,12 @@
                                                          <div class="product_productunit">{{ $product->unit_value." ".$product->unit }}</div>
                                                          <h1 class="product_productprice">{{ currency_symbol().$product->unit_price }}</h1>
                                                          <hr />
-                                                         <div class="product_qtychanger">
+                                                         @if ($product->current_stock <= 0)
+                                                            <div class="productcard_productboxbtn productcard_productbtndisable" style="max-width: 150px;">
+                                                               <button disabled type="button" class="d-block w-100">Out of Stock</button>
+                                                            </div>
+                                                         @else
+                                                            <div class="product_qtychanger">
                                                                <div>
                                                                   <button type="button" wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '-'})">
                                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z"></path></svg>
@@ -105,7 +119,8 @@
                                                                   </button>
                                                                </div>
                                                                <button data-bs-dismiss="modal" aria-label="Close" wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+', open_sidebar: true})" type="button" class="btn btn-primary my-3 px-5 fw-bold">Buy Now</button>
-                                                         </div>
+                                                            </div>
+                                                         @endif
                                                          <hr />
                                                          <div>
                                                                <p>{!! $product->description !!}</p>

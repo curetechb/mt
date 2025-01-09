@@ -37,9 +37,9 @@ class WelcomePage extends Component
         //     ->where("is_active", true)->get();
 
         if($this->search){
-            $products = Product::where("published", 1)->where("name", "like", "%$this->search%")->get()->take(15);
+            $products = Product::orderBy('priority', 'desc')->where("published", 1)->where("name", "like", "%$this->search%")->get()->take(30);
         }else{
-            $products = Product::where("published", 1)->get()->take(15);
+            $products = Product::orderBy('priority', 'desc')->where("published", 1)->get()->take(30);
         }
 
         if(Auth::check()){
