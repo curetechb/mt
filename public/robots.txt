@@ -1,2 +1,10 @@
 User-agent: *
+Allow: /
+
 Disallow:
+Disallow: /app/
+Disallow: /config/
+Disallow: /cgi-bin/
+Disallow: /.well-known/
+
+Sitemap: https://www.muslim.town/sitemap.xml

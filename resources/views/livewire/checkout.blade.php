@@ -5,7 +5,7 @@
             <div class="pt-3">
                 <hr>
                 <div class="d-flex align-items-center justify-content-between">
-                    <h6>Delivery Address</h6>
+                    <h6 class="text-black">Delivery Address</h6>
                 </div>
                 <hr>
                 <div class="row">
@@ -30,7 +30,6 @@
                                 <textarea rows="3" wire:model="address" name="address" class="form-control shadow-none @error('address') is-invalid @enderror" placeholder="Address"></textarea>
                                 <div class="invalid-feedback">@error('address') {{ $message }} @enderror</div>
                             </div>
-                    
                     </div>
                 </div>
             </div>
@@ -40,26 +39,26 @@
             <div>
                 <hr>
                 <div>
-                    <h6>Payment Methods</h6>
+                    <h6 class="text-black">Payment Methods</h6>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="checkout_paymentmethods">
-                            <div class="payment-method-active cash-on-delivery">
-                                <img src="{{asset('livewire/cod.png')}}" width="50">
-                                <h6 class="text-center">Cash on Delivery</h6>
+                        <div class="paymentmethods">
+                            <div class="{{$payment_method == 'cash_on_delivery' ? 'payment-method-active' : ''}} rounded-3 p-3 text-center" wire:click="updatePaymentMethod('cash_on_delivery')">
+                                <img src="{{asset('livewire/cod.png')}}" width="70" class="rounded-3 mb-2">
+                                <h6 class="text-center text-black">Cash on Delivery</h6>
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="checkout_paymentmethods">
-                        <div class=" bkash">
-                            <img src="{{asset('livewire/bkash.png')}}" width="50">
-                            <h6 class="text-center">Bkash</h6>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="paymentmethods">
+                        <div class="{{$payment_method == 'sslcommerz' ? 'payment-method-active' : ''}} rounded-3 p-3 text-center" wire:click="updatePaymentMethod('sslcommerz')">
+                            <img src="{{asset('livewire/sslcommerz.png')}}" width="185" class="rounded-3 mb-2">
+                            <h6 class="text-center text-black">Online Payment</h6>
                         </div>
                     </div>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
             <hr>

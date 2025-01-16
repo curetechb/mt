@@ -14,7 +14,6 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\BusinessSettingsController;
 use App\Http\Controllers\CartAnalysisController;
-use App\Http\Controllers\ChalController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CommissionController;
 use App\Http\Controllers\ConversationController;
@@ -55,20 +54,20 @@ use App\Http\Controllers\StoryGroupController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\SupportTicketController;
 use App\Http\Controllers\TaxController;
+use App\Http\Controllers\TextToBmpController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\UserActivityHistoryController;
 use App\Http\Controllers\WarehouseController;
 use App\Livewire\Checkout;
+use App\Livewire\ECard;
 use App\Livewire\Purchased;
 use App\Livewire\ShowPage;
 use App\Livewire\SupportPage;
 use App\Livewire\WelcomePage;
 use App\Models\Address;
-use App\Models\Category;
-use App\Models\City;
-use App\Models\Product;
-use App\Models\State;
+use App\Models\Order;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +87,13 @@ Route::get('/page/{slug}', ShowPage::class);
 Route::get('/checkout', Checkout::class);
 Route::get('/purchased/{order_id}', Purchased::class);
 Route::get('/support', SupportPage::class);
+Route::get('/e-card', ECard::class);
 
+Route::get('/img', function () {
+    return view('text_to_bmp');
+});
+
+Route::post('/convert-to-bmp', [TextToBmpController::class, 'convertToBmp'])->name('convert-to-bmp');
 
 Route::get('salim', function () {
     // 01732119526
@@ -216,73 +221,18 @@ Route::get('salim', function () {
     }
 });
 
-Route::get('hosen', function(){
+Route::post('sslcommerz-status', function(Request $request){
 
-    $array = array(
-        array("published" => true, "product_price" => 600,"val1"=>"White Cup, youre my world", "val2"=>"1", "val3"=>"24", "val4"=>"6", "val5"=>"", "val6"=>"18",),
-        array("published" => true, "product_price" => 600,"val1"=>"Pink Cup, youre my ❤️", "val2"=>"2", "val3"=>"21", "val4"=>"6", "val5"=>"", "val6"=>"15",),
-        array("published" => true, "product_price" => 600,"val1"=>"Green Cup x 3, plan start finish", "val2"=>"3", "val3"=>"24", "val4"=>"2", "val5"=>"", "val6"=>"22",),
-        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"49", "val4"=>"10", "val5"=>"1", "val6"=>"39",),
-        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"46", "val4"=>"5", "val5"=>"3", "val6"=>"41",),
-        array("published" => true, "product_price" => 1200,"val1"=>"Sweat Jumper (White)", "val2"=>"6", "val3"=>"47", "val4"=>"34", "val5"=>"4", "val6"=>"13",),
-        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, proud muslim", "val2"=>"4", "val3"=>"83", "val4"=>"0", "val5"=>"", "val6"=>"83",),
-        array("published" => true, "product_price" => 400,"val1"=>"Phone cover, hadith", "val2"=>"5", "val3"=>"84", "val4"=>"0", "val5"=>"", "val6"=>"84",),
-        array("published" => false, "product_price" => 1000,"val1"=>"Shal (Chaina)", "val2"=>"7", "val3"=>"17", "val4"=>"8", "val5"=>"", "val6"=>"9",),
-        array("published" => false, "product_price" => 1000,"val1"=>"Shal (Bangla))", "val2"=>"8", "val3"=>"3", "val4"=>"0", "val5"=>"", "val6"=>"3",),
-        array("published" => true, "product_price" => 600,"val1"=>"Green Mug (Akij)", "val2"=>"3", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
-        array("published" => true, "product_price" => 600,"val1"=>"Pink Mug (Akij)", "val2"=>"2", "val3"=>"250", "val4"=>"0", "val5"=>"", "val6"=>"250",),
-        array("published" => true, "product_price" => 1200,"val1"=>"Sweat Jumper (Black)", "val2"=>"9", "val3"=>"6", "val4"=>"1", "val5"=>"", "val6"=>"5",),
-        array("published" => true, "product_price" => 1400,"val1"=>"Hudi (Black)", "val2"=>"10", "val3"=>"10", "val4"=>"2", "val5"=>"", "val6"=>"8",),
-        array("published" => true, "product_price" => 400,"val1"=>"T-Shirt (White)", "val2"=>"11", "val3"=>"90", "val4"=>"0", "val5"=>"", "val6"=>"90",),
-        array("published" => true, "product_price" => 400,"val1"=>"T-shirt (Black)", "val2"=>"12", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",),
-        array("published" => false, "product_price" => 1000,"val1"=>"Pillow cover", "val2"=>"13", "val3"=>"58", "val4"=>"0", "val5"=>"", "val6"=>"58",),
-        array("published" => false, "product_price" => 1000,"val1"=>"Table mat", "val2"=>"14", "val3"=>"12", "val4"=>"0", "val5"=>"", "val6"=>"12",)
-    );
-
-    \DB::beginTransaction();
-    try{
-        foreach ($array as $arr) {
-            $product_name = $arr['val1'];
-            $product_id = $arr['val2'];
-            $qty = $arr['val3'];
-            $sold = $arr['val4'];
-            $return = $arr['val5'];
-            $stock = $arr['val6'];
-            $product_price = $arr['product_price'];
-    
-            $product = new Product();
-            $product->name = $product_name;
-            $product->is_b2b_product = false;
-            $product->category_id = 1;
-            $product->unit_value = 1;
-            $product->unit = 'pcs';
-            $product->min_qty = 1;
-            $product->max_qty = 10;
-    
-            $tags = array();
-            $product->tags = implode(',', $tags);
-            $product->unit_price = $product_price;
-      
-            $product->current_stock = intval($stock);
-            $product->sku = $product_id;
-            $product->free_shipping = false;
-            $product->added_by = "admin";
-            $product->user_id = 1;
-            $slug = \Illuminate\Support\Str::slug($product_name, '-');
-            $product->slug = $slug;
-            $product->published = 0;
-            $product->save();
-        }
-        \DB::commit();
-        echo "done";
-    }catch(\Exception $e){
-        \DB::rollback();
-        throw $e;
+    $status = $request->order_status;
+    $order_id = $request->order_id;
+    if($status == "success"){
+        $order = Order::find($order_id);
+        $order->payment_status = "paid";
+        $order->save();
     }
 
-    
-
-});
+    return redirect("/purchased/$order_id");
+})->name('sslcommerz.status');
 
 Route::prefix('admin')->group(function () {
 

@@ -15,5 +15,6 @@ class VerifyCsrfToken extends Middleware
         '/api*',
         '/config_content',
         '/bkash*',
+        '/sslcommerz-status'
     ];
 }
