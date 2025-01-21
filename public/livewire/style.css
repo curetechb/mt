@@ -2673,3 +2673,35 @@ h1,h2,h3,h4,h5,h6,strong{
     right: 20px;
   }
   
+
+  .bg-greeting{
+    background-color: #507149;
+  }
+
+  .bg-greeting:hover{
+    background-color: #486e41;
+  }
+
+  .bg-facebook{
+    background-color: #3b5998;
+  }
+
+  .bg-facebook:hover{
+    background-color: #2d4373;
+  }
+
+  .bg-email{
+    background-color: #f1c40f;
+  }
+
+  .bg-email:hover{
+    background-color: #dab10d;
+  }
+
+  .bg-messenger{
+    background-color: #FF6070;
+  }
+
+  .bg-messenger:hover{
+    background-color: #e44c5b;
+  }

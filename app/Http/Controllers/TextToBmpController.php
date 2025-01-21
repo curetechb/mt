@@ -63,7 +63,8 @@ class TextToBmpController extends Controller
         $text = $request->input('text');
         $font = public_path('sf_pro.ttf');  // Provide the path to a valid TTF font file
         $fontSize = 100;  // Set font size to 125
-        $width = 1550;  // Image width
+        // $width = 1550;  // Image width
+        $width = 500;  // Image width
         $height = 150; // Image height
 
         // Create the image resource
@@ -82,8 +83,8 @@ class TextToBmpController extends Controller
         $textHeight = $bbox[7] - $bbox[1]; // Height of the text
 
         // Calculate x and y coordinates to center the text
-        $x = ($width - $textWidth) / 2;  // Horizontally center the text
-        // $x = 0;
+        // $x = ($width - $textWidth) / 2;  // Horizontally center the text
+        $x = 0;
         $y = ($height - $textHeight) / 2 + $textHeight + 100; // Vertically center the text
 
         // Add the text to the image

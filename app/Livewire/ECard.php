@@ -7,13 +7,17 @@ use Livewire\Component;
 class ECard extends Component
 {
 
-    public $occasion = "Ramadan";
+    public $occasion = "Eid";
     public $to = "";    
     public $image = "";
     public $images = [
+        "Eid" => "livewire/greetings/eid-ul-fitr.jpg",
         "Ramadan" => "livewire/greetings/ramadan.jpg",
         "Anniversary" => "livewire/greetings/anniversary.png",
-        "Eid-ul-Fitr" => "livewire/greetings/eid-ul-fitr.jpg",
+        "Birthday" => "livewire/greetings/birthday.jpg",
+        "Get well" => "livewire/greetings/getwell.jpg",
+        "Thank you" => "livewire/greetings/thank-you.jpg",
+        "Congratulation" => "livewire/greetings/congratulations.jpg",
     ];
 
 
