@@ -94,132 +94,133 @@ Route::get('/img', function () {
 });
 
 Route::post('/convert-to-bmp', [TextToBmpController::class, 'convertToBmp'])->name('convert-to-bmp');
+Route::get('/di', [TextToBmpController::class, 'createImageWithText']);
 
-Route::get('salim', function () {
-    // 01732119526
-    $array = array(
-        array("val0" => "001", "product_id" => 2, "qty" => 1, "val1" => "Monir Hossain", "val2" => "01633950636", "val3" => "25/11/2024", "val4" => "koral Pink Mug x 1", "val5" => "MCC Tower Level 7. House 76.Road 127.Gulshan Avenue. Gulshan-1 Dhaka.", "val6" => "460", "val7" => "Pickup", "val8" => "Friday Delivery Needed(29.11.24)"),
-        array("val0" => "002", "product_id" => 2, "qty" => 1, "val1" => "Sazzad", "val2" => "01723313735", "val3" => "26/11/2025", "val4" => "koral pink mug x1", "val5" => "Puraton bahadur bajar, dinajpur", "val6" => "480", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "003", "product_id" => 2, "qty" => 1, "val1" => "Dr. Shetu", "val2" => "01300157359", "val3" => "26/11/2026", "val4" => "Koral Pink Mug x 1", "val5" => "check post, rangpur", "val6" => "480", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "004", "product_id" => 3, "qty" => 1, "val1" => "Mohammad Redwan", "val2" => "01333393558", "val3" => "26/11/2024", "val4" => "Oppo A38 X1 (Caligraphy)", "val5" => "Hemayet pur, joyna bari madrasa road", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "007", "product_id" => 3, "qty" => 1, "val1" => "Belal Hosain", "val2" => "01756641181", "val3" => "26/11/2024", "val4" => "Vivo y 11 x1", "val5" => "Tazumuddin Haque Road, Bhola", "val6" => "300", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "008", "product_id" => 3, "qty" => 2, "val1" => "Tahmina zahan", "val2" => "01706114609", "val3" => "26/11/2024", "val4" => "Vivo y36 (phone cover x 2)", "val5" => "Feni mohipal temuhani", "val6" => "550", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "009", "product_id" => 3, "qty" => 1, "val1" => "Qari Monir Hossein", "val2" => "01884283124", "val3" => "26/11/2024", "val4" => "vivo y15s x 1 (Proud Muslim)", "val5" => "Nangalkot Police Station, Volain Bazar", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "010", "product_id" => 3, "qty" => 1, "val1" => "Siam Admad", "val2" => "1967152807", "val3" => "26/11/2024", "val4" => "Redmi13", "val5" => "Moulvibazar,Juri", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "012", "product_id" => 3, "qty" => 1, "val1" => "Shaid Ahmad", "val2" => "1925179230", "val3" => "26/11/2024", "val4" => "Samsung a35", "val5" => "Chander kandi, Raipura, Narsindi", "val6" => "300", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "013", "product_id" => 3, "qty" => 1, "val1" => "Md Touhid", "val2" => "01804665531", "val3" => "26/11/2024", "val4" => "samsung galaxy A04S x 1(calligraphy )", "val5" => "TIC colony, Sector 4, Uttara", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "014", "product_id" => 3, "qty" => 1, "val1" => "MD Safwaan Saad", "val2" => "01753545456", "val3" => "27/11/2024", "val4" => "Redmi note 10 pro cover X 1 (Caligraphy)", "val5" => "House-2, Rd-9, Block-C, Bosila City Developer Housing(near bosila bridge), Mohammadpur, Dhaka", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "015", "product_id" => 5, "qty" => 3, "val1" => "Faria Islam", "val2" => "01711815400", "val3" => "27/11/2024", "val4" => "Sweat Jumper X 3 ( S, 2M)", "val5" => "Curetech Ltd., Shagufta Tower", "val6" => "1500", "val7" => "Delivered", "val8" => "Received"),
-        array("val0" => "016", "product_id" => 5, "qty" => 1, "val1" => "Tasmin Ahmed", "val2" => "01722065374", "val3" => "27/11/2024", "val4" => "Sweater jumper, size L", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "500", "val7" => "Delivered", "val8" => "Received"),
-        array("val0" => "017", "product_id" => 3, "qty" => 1, "val1" => "Nafis Noor", "val2" => "01876856860", "val3" => "27/11/2024", "val4" => "Redmi Note-9 (Proud Muslim)", "val5" => "Keraniganj,Dhaka", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "018", "product_id" => 5, "qty" => 2, "val1" => "Apple Mahmud", "val2" => "01726014285", "val3" => "27/11/2024", "val4" => "Sweater jumper x 2, size L and XL", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "1000", "val7" => "Delivered", "val8" => "Received"),
-        array("val0" => "019", "product_id" => 2, "qty" => 1, "val1" => "Apple Mahmud", "val2" => "01726014285", "val3" => "27/11/2024", "val4" => "coral pink mug x 1 ", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "300", "val7" => "Delivered", "val8" => "Received"),
-        array("val0" => "020", "product_id" => 5, "qty" => 2, "val1" => "Sayid mirza", "val2" => "01711555645", "val3" => "27/11/2024", "val4" => "Sweat jumper x 2, size M and L", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "1000", "val7" => "Delivered", "val8" => "Received"),
-        array("val0" => "021", "product_id" => 5, "qty" => 1, "val1" => "Risad Mahmud", "val2" => "01941196277", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Tower Hamlet, 16 Kemal Ataturk Avenue, Banani, dhaka-1213( Al-Arafah islami bank, banani branch, 2nd floor)", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "022", "product_id" => 5, "qty" => 1, "val1" => "Alsarafat Ullah", "val2" => "01837106084", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Hajiganj Rajargaon bazar", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "023", "product_id" => 5, "qty" => 1, "val1" => "Sagor", "val2" => "01321794437", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Faridpur sadarpur", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "024", "product_id" => 5, "qty" => 1, "val1" => "Al Amin Ahsan", "val2" => "01614357236", "val3" => "28/11/2024", "val4" => "sweat jumper X1 S", "val5" => "Rajshahi, Chapai Nawabganj, Nachol, Nizampur Islami Bank(ground floor)", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "025", "product_id" => 3, "qty" => 1, "val1" => "RS Al-amin", "val2" => "01724121069", "val3" => "28/11/2024", "val4" => "realme 12 X1(i am a proud muslim)", "val5" => "Botbazar gacha road", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "026", "product_id" => 5, "qty" => 1, "val1" => "Alomgir Patowary", "val2" => "01862020259", "val3" => "28/11/2024", "val4" => "Sweater jumper, size XL", "val5" => "Ambagan, Matirangga, Khagrachari", "val6" => "500", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "027", "product_id" => 5, "qty" => 1, "val1" => "Ashraf ", "val2" => "01675787111", "val3" => "28/11/2024", "val4" => "sweat jumper X1 M (44 chest)", "val5" => "61 sikkatuli lean nazira bazar bangshal Dhaka near sikkatuli park ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "028", "product_id" => 5, "qty" => 1, "val1" => "Mohammad Mehedi Hasan", "val2" => "01614265425", "val3" => "29/11/2024", "val4" => "sweat jumper X1 L", "val5" => "Curetech Office", "val6" => "500", "val7" => "Delivered", "val8" => "customer will pick up"),
-        array("val0" => "029", "product_id" => 5, "qty" => 1, "val1" => "Hm Habibullah Redoan ", "val2" => "01742900864 ", "val3" => "29/11/2024", "val4" => "sweat jumper X1 L", "val5" => "Dhaka centonment Balu ghat.  Baron tek", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "030", "product_id" => 5, "qty" => 1, "val1" => "Siam ", "val2" => "01325238314", "val3" => "30/11/2024", "val4" => "sweat jumper X1  Size M", "val5" => "kalihati, Tangail", "val6" => "500", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "031", "product_id" => 5, "qty" => 1, "val1" => "Md. Durul Huda", "val2" => "01871495034", "val3" => "30/11/2024", "val4" => "Sweat JumperX1 L", "val5" => "teacher ferdous Alam Firoj High School, Firoj Nagar Gandina, Kalihati, Tangail", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "032", "product_id" => 5, "qty" => 1, "val1" => "Faruk", "val2" => "01829089472", "val3" => "30/11/2024", "val4" => "Sweat JumperX1 L", "val5" => "D/s:chittagong, Thana: mirshari, Village:mithanala, Union: 10 number bot office ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "033", "product_id" => 5, "qty" => 1, "val1" => "তারেক মাহমুদ", "val2" => "01646376749", "val3" => "01/12/2024", "val4" => "Sweat JumperX1 L", "val5" => "গ্রাম গাজির কান্দি ইউনিয়ন কৃষ্ণ নগর থানা নবীনগর জেলা ব্রাক্ষণবাড়িয়া ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "034", "product_id" => 3, "qty" => 1, "val1" => "Salim Hosen", "val2" => "01762473884", "val3" => "01/12/2024", "val4" => "iphone 11 x1 (proud muslim)", "val5" => "House- TA136, (1st Floor, Sagufta Tower, Gulshan Badda Link Rd, Dhaka 1212", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
-        array("val0" => "035", "product_id" => 3, "qty" => 1, "val1" => "মো: মাহমুদুল হাসান সা'দ", "val2" => "01991674949", "val3" => "01/12/2024", "val4" => "Samsung Galaxy A35 x1 (Caligraphy)", "val5" => "গ্রাম :নওদাপাড়া হাফিজিয়া মাদ্রাসা, আটঘরিয়া, পাবনা।", "val6" => "380", "val7" => "Pickup", "val8" => "Dec 4/5 tarik Delivery niben"),
-        array("val0" => "036", "product_id" => 3, "qty" => 1, "val1" => "Faria Islam", "val2" => "01711815400", "val3" => "01/12/2024", "val4" => "iPhone 11 x 1 (Caligraphy)", "val5" => "CureTech office 
-    Shagufta tower, Gulshan Badda link road", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
-        array("val0" => "037", "product_id" => 3, "qty" => 1, "val1" => "Falguni Ahmmad Kaira", "val2" => "01757471130", "val3" => "01/12/2024", "val4" => "Samsung M14 x 1 (proud muslim)", "val5" => "Sagufta Tower, House- TA136, (1st Floor), Gulshan Badda Link Road, Dhaka 1212", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
-        array("val0" => "038", "product_id" => 5, "qty" => 1, "val1" => "Md Muaj", "val2" => " 01971751799", "val3" => "01/12/2024", "val4" => "Sweat JumperX1 M", "val5" => "Chormonay, Barishal", "val6" => "550", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "039", "product_id" => 5, "qty" => 1, "val1" => "Rouzatul Jannat", "val2" => "01791913417", "val3" => "03/12/24", "val4" => "Sweat Jumper XL", "val5" => "Road 20, House 33, Rupnagar R/A, Mirpur, Dhaka 1216", "val6" => "500", "val7" => "Pickup", "val8" => ""),
-        array("val0" => "040", "product_id" => 3, "qty" => 1, "val1" => "Mariya ", "val2" => "01703933945", "val3" => "4/12/2024", "val4" => "Vivo y11 (I'm a proud Muslim)", "val5" => "Titas Cumilla , Batakandi Bajar Subuj Banglar samne", "val6" => "380", "val7" => "Pickup", "val8" => ""),
-    );
-
-
-    \DB::beginTransaction();
-    try {
-        foreach ($array as $arr) {
-
-            $sn = $arr['val0'];
-            $name = $arr['val1'];
-            $phone = $arr['val2'];
-            $date = $arr['val3'];
-            $product = $arr['val4'];
-            $addr = $arr['val5'];
-            $price = $arr['val6'];
-            $status = $arr['val7'];
-            $note = $arr['val8'];
-            $product_id = $arr['product_id'];
-            $qty = $arr['qty'];
-
-            $address = \App\Models\Address::where('phone', $phone)->first();
-
-            if (!$address) {
-                $address = new Address();
-                $address->address = $addr;
-                $address->name = $name;
-                $address->phone = $phone;
-                $address->set_default = 1;
-                $address->save();
-            }
-
-            $shippingAddress = [];
-            $shippingAddress['name']        = $address->name;
-            $shippingAddress['address']     = $address->address;
-            $shippingAddress['phone']       = $phone;
+// Route::get('salim', function () {
+//     // 01732119526
+//     $array = array(
+//         array("val0" => "001", "product_id" => 2, "qty" => 1, "val1" => "Monir Hossain", "val2" => "01633950636", "val3" => "25/11/2024", "val4" => "koral Pink Mug x 1", "val5" => "MCC Tower Level 7. House 76.Road 127.Gulshan Avenue. Gulshan-1 Dhaka.", "val6" => "460", "val7" => "Pickup", "val8" => "Friday Delivery Needed(29.11.24)"),
+//         array("val0" => "002", "product_id" => 2, "qty" => 1, "val1" => "Sazzad", "val2" => "01723313735", "val3" => "26/11/2025", "val4" => "koral pink mug x1", "val5" => "Puraton bahadur bajar, dinajpur", "val6" => "480", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "003", "product_id" => 2, "qty" => 1, "val1" => "Dr. Shetu", "val2" => "01300157359", "val3" => "26/11/2026", "val4" => "Koral Pink Mug x 1", "val5" => "check post, rangpur", "val6" => "480", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "004", "product_id" => 3, "qty" => 1, "val1" => "Mohammad Redwan", "val2" => "01333393558", "val3" => "26/11/2024", "val4" => "Oppo A38 X1 (Caligraphy)", "val5" => "Hemayet pur, joyna bari madrasa road", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "007", "product_id" => 3, "qty" => 1, "val1" => "Belal Hosain", "val2" => "01756641181", "val3" => "26/11/2024", "val4" => "Vivo y 11 x1", "val5" => "Tazumuddin Haque Road, Bhola", "val6" => "300", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "008", "product_id" => 3, "qty" => 2, "val1" => "Tahmina zahan", "val2" => "01706114609", "val3" => "26/11/2024", "val4" => "Vivo y36 (phone cover x 2)", "val5" => "Feni mohipal temuhani", "val6" => "550", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "009", "product_id" => 3, "qty" => 1, "val1" => "Qari Monir Hossein", "val2" => "01884283124", "val3" => "26/11/2024", "val4" => "vivo y15s x 1 (Proud Muslim)", "val5" => "Nangalkot Police Station, Volain Bazar", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "010", "product_id" => 3, "qty" => 1, "val1" => "Siam Admad", "val2" => "1967152807", "val3" => "26/11/2024", "val4" => "Redmi13", "val5" => "Moulvibazar,Juri", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "012", "product_id" => 3, "qty" => 1, "val1" => "Shaid Ahmad", "val2" => "1925179230", "val3" => "26/11/2024", "val4" => "Samsung a35", "val5" => "Chander kandi, Raipura, Narsindi", "val6" => "300", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "013", "product_id" => 3, "qty" => 1, "val1" => "Md Touhid", "val2" => "01804665531", "val3" => "26/11/2024", "val4" => "samsung galaxy A04S x 1(calligraphy )", "val5" => "TIC colony, Sector 4, Uttara", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "014", "product_id" => 3, "qty" => 1, "val1" => "MD Safwaan Saad", "val2" => "01753545456", "val3" => "27/11/2024", "val4" => "Redmi note 10 pro cover X 1 (Caligraphy)", "val5" => "House-2, Rd-9, Block-C, Bosila City Developer Housing(near bosila bridge), Mohammadpur, Dhaka", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "015", "product_id" => 5, "qty" => 3, "val1" => "Faria Islam", "val2" => "01711815400", "val3" => "27/11/2024", "val4" => "Sweat Jumper X 3 ( S, 2M)", "val5" => "Curetech Ltd., Shagufta Tower", "val6" => "1500", "val7" => "Delivered", "val8" => "Received"),
+//         array("val0" => "016", "product_id" => 5, "qty" => 1, "val1" => "Tasmin Ahmed", "val2" => "01722065374", "val3" => "27/11/2024", "val4" => "Sweater jumper, size L", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "500", "val7" => "Delivered", "val8" => "Received"),
+//         array("val0" => "017", "product_id" => 3, "qty" => 1, "val1" => "Nafis Noor", "val2" => "01876856860", "val3" => "27/11/2024", "val4" => "Redmi Note-9 (Proud Muslim)", "val5" => "Keraniganj,Dhaka", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "018", "product_id" => 5, "qty" => 2, "val1" => "Apple Mahmud", "val2" => "01726014285", "val3" => "27/11/2024", "val4" => "Sweater jumper x 2, size L and XL", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "1000", "val7" => "Delivered", "val8" => "Received"),
+//         array("val0" => "019", "product_id" => 2, "qty" => 1, "val1" => "Apple Mahmud", "val2" => "01726014285", "val3" => "27/11/2024", "val4" => "coral pink mug x 1 ", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "300", "val7" => "Delivered", "val8" => "Received"),
+//         array("val0" => "020", "product_id" => 5, "qty" => 2, "val1" => "Sayid mirza", "val2" => "01711555645", "val3" => "27/11/2024", "val4" => "Sweat jumper x 2, size M and L", "val5" => "Shagufta tower, Curetechbd,  Gulshan Badda Link road", "val6" => "1000", "val7" => "Delivered", "val8" => "Received"),
+//         array("val0" => "021", "product_id" => 5, "qty" => 1, "val1" => "Risad Mahmud", "val2" => "01941196277", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Tower Hamlet, 16 Kemal Ataturk Avenue, Banani, dhaka-1213( Al-Arafah islami bank, banani branch, 2nd floor)", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "022", "product_id" => 5, "qty" => 1, "val1" => "Alsarafat Ullah", "val2" => "01837106084", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Hajiganj Rajargaon bazar", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "023", "product_id" => 5, "qty" => 1, "val1" => "Sagor", "val2" => "01321794437", "val3" => "27/11/2024", "val4" => "Sweater jumper, size M", "val5" => "Faridpur sadarpur", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "024", "product_id" => 5, "qty" => 1, "val1" => "Al Amin Ahsan", "val2" => "01614357236", "val3" => "28/11/2024", "val4" => "sweat jumper X1 S", "val5" => "Rajshahi, Chapai Nawabganj, Nachol, Nizampur Islami Bank(ground floor)", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "025", "product_id" => 3, "qty" => 1, "val1" => "RS Al-amin", "val2" => "01724121069", "val3" => "28/11/2024", "val4" => "realme 12 X1(i am a proud muslim)", "val5" => "Botbazar gacha road", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "026", "product_id" => 5, "qty" => 1, "val1" => "Alomgir Patowary", "val2" => "01862020259", "val3" => "28/11/2024", "val4" => "Sweater jumper, size XL", "val5" => "Ambagan, Matirangga, Khagrachari", "val6" => "500", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "027", "product_id" => 5, "qty" => 1, "val1" => "Ashraf ", "val2" => "01675787111", "val3" => "28/11/2024", "val4" => "sweat jumper X1 M (44 chest)", "val5" => "61 sikkatuli lean nazira bazar bangshal Dhaka near sikkatuli park ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "028", "product_id" => 5, "qty" => 1, "val1" => "Mohammad Mehedi Hasan", "val2" => "01614265425", "val3" => "29/11/2024", "val4" => "sweat jumper X1 L", "val5" => "Curetech Office", "val6" => "500", "val7" => "Delivered", "val8" => "customer will pick up"),
+//         array("val0" => "029", "product_id" => 5, "qty" => 1, "val1" => "Hm Habibullah Redoan ", "val2" => "01742900864 ", "val3" => "29/11/2024", "val4" => "sweat jumper X1 L", "val5" => "Dhaka centonment Balu ghat.  Baron tek", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "030", "product_id" => 5, "qty" => 1, "val1" => "Siam ", "val2" => "01325238314", "val3" => "30/11/2024", "val4" => "sweat jumper X1  Size M", "val5" => "kalihati, Tangail", "val6" => "500", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "031", "product_id" => 5, "qty" => 1, "val1" => "Md. Durul Huda", "val2" => "01871495034", "val3" => "30/11/2024", "val4" => "Sweat JumperX1 L", "val5" => "teacher ferdous Alam Firoj High School, Firoj Nagar Gandina, Kalihati, Tangail", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "032", "product_id" => 5, "qty" => 1, "val1" => "Faruk", "val2" => "01829089472", "val3" => "30/11/2024", "val4" => "Sweat JumperX1 L", "val5" => "D/s:chittagong, Thana: mirshari, Village:mithanala, Union: 10 number bot office ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "033", "product_id" => 5, "qty" => 1, "val1" => "তারেক মাহমুদ", "val2" => "01646376749", "val3" => "01/12/2024", "val4" => "Sweat JumperX1 L", "val5" => "গ্রাম গাজির কান্দি ইউনিয়ন কৃষ্ণ নগর থানা নবীনগর জেলা ব্রাক্ষণবাড়িয়া ", "val6" => "600", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "034", "product_id" => 3, "qty" => 1, "val1" => "Salim Hosen", "val2" => "01762473884", "val3" => "01/12/2024", "val4" => "iphone 11 x1 (proud muslim)", "val5" => "House- TA136, (1st Floor, Sagufta Tower, Gulshan Badda Link Rd, Dhaka 1212", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
+//         array("val0" => "035", "product_id" => 3, "qty" => 1, "val1" => "মো: মাহমুদুল হাসান সা'দ", "val2" => "01991674949", "val3" => "01/12/2024", "val4" => "Samsung Galaxy A35 x1 (Caligraphy)", "val5" => "গ্রাম :নওদাপাড়া হাফিজিয়া মাদ্রাসা, আটঘরিয়া, পাবনা।", "val6" => "380", "val7" => "Pickup", "val8" => "Dec 4/5 tarik Delivery niben"),
+//         array("val0" => "036", "product_id" => 3, "qty" => 1, "val1" => "Faria Islam", "val2" => "01711815400", "val3" => "01/12/2024", "val4" => "iPhone 11 x 1 (Caligraphy)", "val5" => "CureTech office 
+//     Shagufta tower, Gulshan Badda link road", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
+//         array("val0" => "037", "product_id" => 3, "qty" => 1, "val1" => "Falguni Ahmmad Kaira", "val2" => "01757471130", "val3" => "01/12/2024", "val4" => "Samsung M14 x 1 (proud muslim)", "val5" => "Sagufta Tower, House- TA136, (1st Floor), Gulshan Badda Link Road, Dhaka 1212", "val6" => "200", "val7" => "Customer Pickup", "val8" => ""),
+//         array("val0" => "038", "product_id" => 5, "qty" => 1, "val1" => "Md Muaj", "val2" => " 01971751799", "val3" => "01/12/2024", "val4" => "Sweat JumperX1 M", "val5" => "Chormonay, Barishal", "val6" => "550", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "039", "product_id" => 5, "qty" => 1, "val1" => "Rouzatul Jannat", "val2" => "01791913417", "val3" => "03/12/24", "val4" => "Sweat Jumper XL", "val5" => "Road 20, House 33, Rupnagar R/A, Mirpur, Dhaka 1216", "val6" => "500", "val7" => "Pickup", "val8" => ""),
+//         array("val0" => "040", "product_id" => 3, "qty" => 1, "val1" => "Mariya ", "val2" => "01703933945", "val3" => "4/12/2024", "val4" => "Vivo y11 (I'm a proud Muslim)", "val5" => "Titas Cumilla , Batakandi Bajar Subuj Banglar samne", "val6" => "380", "val7" => "Pickup", "val8" => ""),
+//     );
 
 
+//     \DB::beginTransaction();
+//     try {
+//         foreach ($array as $arr) {
 
-            $order = new \App\Models\Order();
-            $order->ordered_from = "web";
-            $order->tracking_code = rand(1000, 9999);
-            $order->shipping_address = json_encode($shippingAddress);
-            $order->shipping_type = "delivery";
-            $order->payment_type = "cash_on_delivery";
-            $order->date = strtotime('now');
-            $order->save();
+//             $sn = $arr['val0'];
+//             $name = $arr['val1'];
+//             $phone = $arr['val2'];
+//             $date = $arr['val3'];
+//             $product = $arr['val4'];
+//             $addr = $arr['val5'];
+//             $price = $arr['val6'];
+//             $status = $arr['val7'];
+//             $note = $arr['val8'];
+//             $product_id = $arr['product_id'];
+//             $qty = $arr['qty'];
 
-            $product = \App\Models\Product::find($product_id);
+//             $address = \App\Models\Address::where('phone', $phone)->first();
 
-            $order_detail = new \App\Models\OrderDetail();
-            $order_detail->order_id = $order->id;
-            $order_detail->seller_id = 1;
-            $order_detail->product_id = $product_id;
+//             if (!$address) {
+//                 $address = new Address();
+//                 $address->address = $addr;
+//                 $address->name = $name;
+//                 $address->phone = $phone;
+//                 $address->set_default = 1;
+//                 $address->save();
+//             }
 
-            $order_detail->price = $price * $qty;
-            $order_detail->tax = 0;
+//             $shippingAddress = [];
+//             $shippingAddress['name']        = $address->name;
+//             $shippingAddress['address']     = $address->address;
+//             $shippingAddress['phone']       = $phone;
 
-            $order_detail->quantity = $qty;
-            $order_detail->save();
 
-            $grand_total = $price * $qty;
 
-            $order->grand_total = $grand_total;
-            $order->shipping_cost = 0;
+//             $order = new \App\Models\Order();
+//             $order->ordered_from = "web";
+//             $order->tracking_code = rand(1000, 9999);
+//             $order->shipping_address = json_encode($shippingAddress);
+//             $order->shipping_type = "delivery";
+//             $order->payment_type = "cash_on_delivery";
+//             $order->date = strtotime('now');
+//             $order->save();
 
-            $order_code = "100001";
-            $order_code_len = strlen($order_code);
-            $order_id_len = strlen("$order->id");
-            $new_order_code = $order->id;
+//             $product = \App\Models\Product::find($product_id);
 
-            if ($order_id_len < $order_code_len) {
-                $order_code = substr($order_code, 0, $order_code_len - $order_id_len);
-                $new_order_code = $order_code . $order->id;
-            }
-            $order->code = $new_order_code;
-            $order->save();
+//             $order_detail = new \App\Models\OrderDetail();
+//             $order_detail->order_id = $order->id;
+//             $order_detail->seller_id = 1;
+//             $order_detail->product_id = $product_id;
 
-        }
-        \DB::commit();
-        echo "DONE";
-    } catch (\Exception $e) {
-        \DB::rollBack();
-        throw $e;
-    }
-});
+//             $order_detail->price = $price * $qty;
+//             $order_detail->tax = 0;
+
+//             $order_detail->quantity = $qty;
+//             $order_detail->save();
+
+//             $grand_total = $price * $qty;
+
+//             $order->grand_total = $grand_total;
+//             $order->shipping_cost = 0;
+
+//             $order_code = "100001";
+//             $order_code_len = strlen($order_code);
+//             $order_id_len = strlen("$order->id");
+//             $new_order_code = $order->id;
+
+//             if ($order_id_len < $order_code_len) {
+//                 $order_code = substr($order_code, 0, $order_code_len - $order_id_len);
+//                 $new_order_code = $order_code . $order->id;
+//             }
+//             $order->code = $new_order_code;
+//             $order->save();
+
+//         }
+//         \DB::commit();
+//         echo "DONE";
+//     } catch (\Exception $e) {
+//         \DB::rollBack();
+//         throw $e;
+//     }
+// });
 
 Route::post('sslcommerz-status', function(Request $request){
 

@@ -402,6 +402,16 @@ class ProductController extends Controller
             }
         }
         $product->tags           = implode(',', $tags);
+
+        $sizes = array();
+        if ($request->sizes[0] != null) {
+            foreach (json_decode($request->sizes[0]) as $key => $size) {
+                array_push($sizes, $size->value);
+            }
+        }
+        $product->sizes           = implode(',', $sizes);
+        // ALTER TABLE `products` ADD `sizes` TEXT NULL AFTER `name`;
+        
         $product->refundable = $request->refundable ? true : false;
 
         $product->photos                 = $request->photos;
@@ -506,6 +516,9 @@ class ProductController extends Controller
                 "notes" => $product->description
             ]);
         }
+
+
+
 
 
 

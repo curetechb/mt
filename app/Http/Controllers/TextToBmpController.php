@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Laravel\Facades\Image;
 
 class TextToBmpController extends Controller
 {
@@ -99,5 +100,100 @@ class TextToBmpController extends Controller
 
         // Return the image as a download
         return response()->download($filePath)->deleteFileAfterSend(true);
+    }
+
+
+    public function createImageWithText()
+    {
+
+        $image_name = "anniversary.jpg";
+
+        // Load the image (use your desired image path or URL)
+        $imagePath = public_path("livewire/greetings/$image_name"); // Replace with your image file
+        $image = Image::read($imagePath);
+        
+
+        if($image_name == "anniversary.jpg"){
+            // Add text on top of the image
+            $image->text('Barkat', $image->width() / 2, $image->height() / 2 - 700, function ($font) use($image) {
+                $font->file(public_path('fonts/GreatVibes-Regular.ttf')); // Optional: Load a custom font
+                $font->size(290);                            // Font size
+                $font->color('#000000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+
+            // Add text on top of the image
+            $image->text('Selim', $image->width() / 2, $image->height() / 2 + 700, function ($font) use($image) {
+                $font->file(public_path('fonts/GreatVibes-Regular.ttf')); // Optional: Load a custom font
+                $font->size(290);                            // Font size
+                $font->color('#000000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+        }else if($image_name == "greeting-2.jpg"){
+            // Add text on top of the image
+            $image->text('Barkat', $image->width() / 2, $image->height() / 2 - 700, function ($font) use($image) {
+                $font->file(public_path('fonts/BirthstoneBounce-Regular.ttf')); // Optional: Load a custom font
+                $font->size(290);                            // Font size
+                $font->color('#000000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+
+            // Add text on top of the image
+            $image->text('Selim', $image->width() / 2, $image->height() / 2 + 700, function ($font) use($image) {
+                $font->file(public_path('fonts/BirthstoneBounce-Regular.ttf')); // Optional: Load a custom font
+                $font->size(290);                            // Font size
+                $font->color('#000000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+        }else if($image_name == "eid-mubarak.jpg"){
+            // Add text on top of the image
+            $image->text('Barkat', $image->width() / 2, $image->height() / 2 - 100, function ($font) use($image) {
+                $font->file(public_path('fonts/Hikerstone-Slant.ttf')); // Optional: Load a custom font
+                $font->size(240);                            // Font size
+                $font->color('#FF0000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+
+            // Add text on top of the image
+            $image->text('Salim', $image->width() / 2, $image->height() / 2 + 930, function ($font) use($image) {
+                $font->file(public_path('fonts/Hikerstone-Slant.ttf')); // Optional: Load a custom font
+                $font->size(240);                            // Font size
+                $font->color('#FF0000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+        }else if($image_name == "ramadan-mubarak.jpg"){
+            // Add text on top of the image
+            $image->text('Barkat', $image->width() / 2, $image->height() / 2 - 30, function ($font) use($image) {
+                $font->file(public_path('fonts/Hikerstone-Slant.ttf')); // Optional: Load a custom font
+                $font->size(220);                            // Font size
+                $font->color('#FF0000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+
+            // Add text on top of the image
+            $image->text('Salim', $image->width() / 2, $image->height() / 2 + 930, function ($font) use($image) {
+                $font->file(public_path('fonts/Hikerstone-Slant.ttf')); // Optional: Load a custom font
+                $font->size(220);                            // Font size
+                $font->color('#FF0000');                    // Font color
+                $font->align('center');                     // Horizontal alignment
+                $font->valign('middle');                    // Vertical alignment
+            });
+        }
+
+        // Save or Download the image
+        $image->save(public_path('output.jpg')); // Save the image to the server
+
+        // Alternatively, to download the image
+        // return response()->make($image->encode('jpg'), 200, [
+        //     'Content-Type' => 'image/jpeg',
+        //     'Content-Disposition' => 'attachment; filename="custom-image.jpg"',
+        // ]);
     }
 }

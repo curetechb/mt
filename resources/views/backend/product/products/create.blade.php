@@ -93,6 +93,13 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">{{translate('Sizes')}}</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control aiz-tag-input" name="sizes[]" placeholder="{{ translate('Type and hit enter to add a size') }}">
+                            </div>
+                        </div>
+
                         @if (addon_is_activated('pos_system'))
                         <div class="form-group row">
                             <label class="col-md-3 col-from-label">{{translate('Barcode')}}</label>

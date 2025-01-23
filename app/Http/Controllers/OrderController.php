@@ -276,12 +276,22 @@ class OrderController extends Controller
 
             $user = $order->user;
             // $points = $user->points - $order->points_accrued;
-            $points = $user->points + $order->points_redeem;
-            $user->points = $points;
-            $user->save();
+            // $points = $user->points + $order->points_redeem;
+            // $user->points = $points;
+            // $user->save();
 
             $order->delivery_status = "cancelled";
             $order->reason = $request->reason;
+            foreach ($order->orderDetails as $key => $orderDetail) {
+
+                $product_stock = ProductStock::where('product_id', $orderDetail->product_id)->where('variant', $orderDetail->variation)->first();
+                if ($product_stock != null) {
+                    $product_stock->qty += $orderDetail->quantity;
+                    $product_stock->save();
+                }
+
+                // $orderDetail->delete();
+            }
             // $order->points_accrued = 0;
             // $order->points_redeem = 0;
             $order->update();

@@ -85,12 +85,13 @@ class Checkout extends Component
         
         if (!$address) {
             $address = new Address;
-            $address->address = $this->address;
-            $address->name = $this->name;
-            $address->phone = $this->phone_number;
-            $address->set_default = 1;
-            $address->save();
         }
+
+        $address->address = $this->address;
+        $address->name = $this->name;
+        $address->phone = $this->phone_number;
+        $address->set_default = 1;
+        $address->save();
 
         $shippingAddress = [];
         $shippingAddress['name']        = $address->name;
