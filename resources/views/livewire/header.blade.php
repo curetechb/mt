@@ -46,6 +46,7 @@
             <ul>
                 <li class="mb-2 px-2 py-1"><a wire:navigate href="/page/terms">Terms &amp; Conditions</a></li>
                 <li class="mb-2 px-2 py-1"><a wire:navigate href="/page/privacy-policy">Privacy Policy</a></li>
+                <li class="mb-2 px-2 py-1"><a wire:navigate href="/page/return-policy">Return & Refund Policy</a></li>
                 <li class="mb-2 px-2 py-1"><a wire:navigate href="/support">Support</a></li>
             </ul>
         </div>

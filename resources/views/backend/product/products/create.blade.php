@@ -94,9 +94,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-md-3 col-from-label">{{translate('Sizes')}}</label>
+                            <label class="col-lg-3 col-from-label">{{translate('Attribute Name')}}</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" name="attribute_name" placeholder="{{translate('Attribute Name')}}" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">{{translate('Attribute values')}}</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control aiz-tag-input" name="sizes[]" placeholder="{{ translate('Type and hit enter to add a size') }}">
+                                <input type="text" class="form-control aiz-tag-input" name="attribute_values[]" value="" placeholder="{{ translate('Type and hit enter to add') }}" data-role="attributesinput">
+                                <small class="text-muted">{{translate('This is used for product attributes.')}}</small>
                             </div>
                         </div>
 
@@ -152,9 +160,20 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
-                            <label class="col-md-3 col-from-label">{{translate('Unit price')}} <span class="text-danger">*</span></label>
+                            <label class="col-md-3 col-from-label">{{translate('Selling price')}} <span class="text-danger">*</span></label>
                             <div class="col-md-6">
-                                <input type="number" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Unit price') }}" name="unit_price" class="form-control" required>
+                                <input type="number" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Selling price') }}" name="unit_price" class="form-control" required>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-from-label">{{translate('Regular price')}}</label>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="{{translate('Regular price')}}" name="regular_price" id="regular_price" class="form-control" value="" >
+                            </div>
+                            <div class="col-lg-3">
+                                {{-- <button type="button" class="btn btn-primary" id="getCDprice">Get CD Price</button> --}}
                             </div>
                         </div>
 

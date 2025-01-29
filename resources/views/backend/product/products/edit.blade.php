@@ -101,10 +101,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-md-3 col-from-label">{{translate('Sizes')}}</label>
+                            <label class="col-lg-3 col-from-label">{{translate('Attribute Name')}}</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" name="attribute_name" placeholder="{{translate('Attribute Name')}}" value="{{ $product->attribute_name }}" >
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-from-label">{{translate('Attribute values')}}</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control aiz-tag-input" name="sizes[]" value="{{ $product->sizes }}" placeholder="{{ translate('Type and hit enter to add a tag') }}" data-role="sizesinput">
-                                <small class="text-muted">{{translate('This is used for product size.')}}</small>
+                                <input type="text" class="form-control aiz-tag-input" name="attribute_values[]" value="{{ $product->attribute_values }}" placeholder="{{ translate('Type and hit enter to add') }}" data-role="attributesinput">
+                                <small class="text-muted">{{translate('This is used for product attributes.')}}</small>
                             </div>
                         </div>
 
@@ -163,12 +170,22 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
-                            <label class="col-lg-3 col-from-label">{{translate('Unit price')}}</label>
+                            <label class="col-lg-3 col-from-label">{{translate('Selling price')}}</label>
                             <div class="col-lg-6">
-                                <input type="text" placeholder="{{translate('Unit price')}}" name="unit_price" id="unit_price" class="form-control" value="{{$product->unit_price}}" required>
+                                <input type="text" placeholder="{{translate('Selling price')}}" name="unit_price" id="unit_price" class="form-control" value="{{$product->unit_price}}" required>
                             </div>
                             <div class="col-lg-3">
-                                <button type="button" class="btn btn-primary" id="getCDprice">Get CD Price</button>
+                                {{-- <button type="button" class="btn btn-primary" id="getCDprice">Get CD Price</button> --}}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-from-label">{{translate('Regular price')}}</label>
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="{{translate('Regular price')}}" name="regular_price" id="regular_price" class="form-control" value="{{$product->regular_price}}" >
+                            </div>
+                            <div class="col-lg-3">
+                                {{-- <button type="button" class="btn btn-primary" id="getCDprice">Get CD Price</button> --}}
                             </div>
                         </div>
 
@@ -238,6 +255,76 @@
                         </div> --}}
                     </div>
                 </div>
+
+                {{-- <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0 h6">{{translate('Product Variation')}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row gutters-5">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" value="{{translate('Colors')}}" disabled>
+                            </div>
+                            <div class="col-lg-8">
+                                <select class="form-control aiz-selectpicker" data-live-search="true" data-selected-text-format="count" name="colors[]" id="colors" multiple>
+                                    @foreach (\App\Models\Color::orderBy('name', 'asc')->get() as $key => $color)
+                                    <option
+                                        value="{{ $color->code }}"
+                                        data-content="<span><span class='size-15px d-inline-block mr-2 rounded border' style='background:{{ $color->code }}'></span><span>{{ $color->name }}</span></span>"
+                                        <?php if (in_array($color->code, json_decode($product->colors) ?? [])) echo 'selected' ?>
+                                        ></option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-lg-1">
+                                <label class="aiz-switch aiz-switch-success mb-0">
+                                    <input value="1" type="checkbox" name="colors_active" <?php if (count(json_decode($product->colors) ?? []) > 0) echo "checked"; ?> >
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group row gutters-5">
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" value="{{translate('Attributes')}}" disabled>
+                            </div>
+                            <div class="col-lg-8">
+                                <select name="choice_attributes[]" id="choice_attributes" data-selected-text-format="count" data-live-search="true" class="form-control aiz-selectpicker" multiple data-placeholder="{{ translate('Choose Attributes') }}">
+                                    @foreach (\App\Models\Attribute::all() as $key => $attribute)
+                                    <option value="{{ $attribute->id }}" @if($product->attributes != null && in_array($attribute->id, json_decode($product->attributes, true))) selected @endif>{{ $attribute->getTranslation('name') }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <p>{{ translate('Choose the attributes of this product and then input values of each attribute') }}</p>
+                            <br>
+                        </div>
+
+                        <div class="customer_choice_options" id="customer_choice_options">
+                            @foreach (json_decode($product->choice_options ?? "[]") as $key => $choice_option)
+                            <div class="form-group row">
+                                <div class="col-lg-3">
+                                    <input type="hidden" name="choice_no[]" value="{{ $choice_option->attribute_id }}">
+                                    <input type="text" class="form-control" name="choice[]" value="{{ optional(\App\Models\Attribute::find($choice_option->attribute_id))->getTranslation('name') }}" placeholder="{{ translate('Choice Title') }}" disabled>
+                                </div>
+                                <div class="col-lg-8">
+                                    <select class="form-control aiz-selectpicker attribute_choice" data-live-search="true" name="choice_options_{{ $choice_option->attribute_id }}[]" multiple>
+                                        @foreach (\App\Models\AttributeValue::where('attribute_id', $choice_option->attribute_id)->get() as $row)
+                                        <option value="{{ $row->value }}" @if( in_array($row->value, $choice_option->values)) selected @endif>
+                                            {{ $row->value }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div> --}}
+             
+
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0 h6">{{translate('Product Description')}}</h5>

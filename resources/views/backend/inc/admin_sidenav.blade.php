@@ -141,6 +141,20 @@
                                     <span class="aiz-side-nav-text">{{ translate('Brand') }}</span>
                                 </a>
                             </li>
+             
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{route('attributes.index')}}" class="aiz-side-nav-link {{ areActiveRoutes(['attributes.index','attributes.create','attributes.edit','attributes.show','edit-attribute-value'.''])}}">
+                                        <span class="aiz-side-nav-text">{{translate('Attribute')}}</span>
+                                    </a>
+                                </li>
+                
+                   
+                                <li class="aiz-side-nav-item">
+                                    <a href="{{route('colors')}}" class="aiz-side-nav-link {{ areActiveRoutes(['colors','colors.edit'])}}">
+                                        <span class="aiz-side-nav-text">{{translate('Colors')}}</span>
+                                    </a>
+                                </li>
+                     
                         </ul>
                     </li>
                 @endif

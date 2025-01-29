@@ -2140,7 +2140,7 @@ small,
     display: -webkit-box;
     -webkit-box-orient: vertical;
     padding-top: 5px;
-    height: 60px;
+    height: 44px;
     white-space: normal;
     margin-bottom: 0!important;
 }
@@ -2704,4 +2704,22 @@ h1,h2,h3,h4,h5,h6,strong{
 
   .bg-messenger:hover{
     background-color: #e44c5b;
+  }
+
+  .btn-size{
+    border: 1px solid #efefef;
+    box-shadow: 0px 0px 3px #dddddd;
+    }
+
+  .btn-size-active{
+    background-color: orange;
+    color: #ffffff;
+  }
+
+  .btn-size-active:hover{
+    color: #fefefe;
+  }
+
+  .text-orange{
+    color: orange;
   }

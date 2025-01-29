@@ -7,7 +7,7 @@ use App\Models\Upload;
 use Response;
 use Auth;
 use Storage;
-use Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class AizUploadController extends Controller
 {
@@ -137,7 +137,7 @@ class AizUploadController extends Controller
 
                 if($type[$extension] == 'image' && get_setting('disable_image_optimization') != 1){
                     try {
-                        $img = Image::make($request->file('aiz_file')->getRealPath())->encode();
+                        $img = Image::read($request->file('aiz_file')->getRealPath());
                         $height = $img->height();
                         $width = $img->width();
                         if($width > $height && $width > 1500){
@@ -151,7 +151,7 @@ class AizUploadController extends Controller
                         }
                         $img->save(base_path('public/').$path);
                         clearstatcache();
-                        $size = $img->filesize();
+                        // $size = $img->filesize();
 
                     } catch (\Exception $e) {
                         //dd($e);
@@ -171,7 +171,7 @@ class AizUploadController extends Controller
                         unlink(base_path('public/').$path);
                     }
                 }
-
+                $size = 1000;
                 $upload->extension = $extension;
                 $upload->file_name = $path;
                 $upload->user_id = Auth::user()->id;

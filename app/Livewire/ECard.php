@@ -17,10 +17,18 @@ class ECard extends Component
     public $to = "";    
     public $from = "";    
     public $image = "";
+    public $texts = [
+        "eid" => "Eid",
+        "ramadan" => "Ramadan",
+        "anniversary" => "Anniversary",
+        "get-well" => "Get Well",
+        "thank-you" => "Thank You",
+        "congratulation" => "Congratulations",
+    ];
     public $images = [
         "eid" => "livewire/greetings/eid-mubarak.jpg",
         "ramadan" => "livewire/greetings/ramadan-mubarak.jpg",
-        "Anniversary" => "livewire/greetings/anniversary.jpg",
+        "anniversary" => "livewire/greetings/anniversary.jpg",
         "get-well" => "livewire/greetings/getwell.jpg",
         "thank-you" => "livewire/greetings/thank-you.jpg",
         "congratulation" => "livewire/greetings/congratulations.jpg",
@@ -115,7 +123,7 @@ class ECard extends Component
         }else if($image_name == "thank-you.jpg"){
             // Add text on top of the image
             if($this->to){
-                $image->text($this->to, $image->width() / 2, $image->height() / 2 - 230, function ($font) use($image) {
+                $image->text($this->to, $image->width() / 2, $image->height() / 2 - 150, function ($font) use($image) {
                     $font->file(public_path('fonts/MyriadPro-Regular.ttf')); // Optional: Load a custom font
                     $font->size(240);                            // Font size
                     $font->color('#536558');                    // Font color
@@ -126,7 +134,7 @@ class ECard extends Component
 
             // Add text on top of the image
             if($this->from){
-                $image->text($this->from, $image->width() / 2, $image->height() / 2 + 650, function ($font) use($image) {
+                $image->text($this->from, $image->width() / 2, $image->height() / 2 + 750, function ($font) use($image) {
                     $font->file(public_path('fonts/MyriadPro-Regular.ttf')); // Optional: Load a custom font
                     $font->size(240);                            // Font size
                     $font->color('#536558');                    // Font color
@@ -138,7 +146,7 @@ class ECard extends Component
         else if($image_name == "congratulations.jpg"){
             // Add text on top of the image
             if($this->to){
-                $image->text($this->to, $image->width() / 2, $image->height() / 2 - 205, function ($font) use($image) {
+                $image->text($this->to, $image->width() / 2, $image->height() / 2 - 150, function ($font) use($image) {
                     $font->file(public_path('fonts/MyriadPro-Regular.ttf')); // Optional: Load a custom font
                     $font->size(240);                            // Font size
                     $font->color('#536558');                    // Font color
@@ -149,7 +157,7 @@ class ECard extends Component
 
             // Add text on top of the image
             if($this->from){
-                $image->text($this->from, $image->width() / 2, $image->height() / 2 + 650, function ($font) use($image) {
+                $image->text($this->from, $image->width() / 2, $image->height() / 2 + 750, function ($font) use($image) {
                     $font->file(public_path('fonts/MyriadPro-Regular.ttf')); // Optional: Load a custom font
                     $font->size(240);                            // Font size
                     $font->color('#536558');                    // Font color

@@ -27,7 +27,7 @@
                                             <tr>
                                                 <td class="pe-2">Total:</td>
                                                 <td><span
-                                                        class="pe-2 fw-bold">{{ currency_symbol() . $order->grand_total }}</span>
+                                                    class="pe-2 fw-bold">{{ currency_symbol() . $order->grand_total - $order->coupon_discount }}</span>
                                                 </td>
                                             </tr>
                                             {{-- <tr>

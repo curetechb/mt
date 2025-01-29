@@ -1,4 +1,4 @@
-<div>
+<div id="sidebar-container">
     <div class="cart-box toggle-cart-sidebar" role="button">
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -49,7 +49,11 @@
                         </div>
                         <div class="cart-image"><img src="{{api_asset($cartItem->product->thumbnail_img)}}" class="img-fluid px-1" alt="Mola Dry Fish" width="60" /></div>
                         <div class="cart-product-info">
-                            <p class="my-0">{{ $cartItem->product->name }}</p>
+                            <p class="my-0">{{ $cartItem->product->name }} 
+                                @if($cartItem->variation)
+                                <span class="text-orange">({{ $cartItem->variation }})</span>
+                                @endif
+                            </p>
                             <p class="my-0"><span>{{ currency_symbol().$cartItem->product->unit_price }}/</span><span>{{ $cartItem->product->unit_value." ".$cartItem->product->unit }}</span></p>
                         </div>
                         <div class="cart-product-price"><p class="text-danger">{{ currency_symbol(). $cartItem->product->unit_price * $cartItem->quantity }}</p></div>

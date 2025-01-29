@@ -49,7 +49,7 @@ class AttributeController extends Controller
         $attribute_translation->name = $request->name;
         $attribute_translation->save();
 
-        Session::Session::flash("success","success",translate('Attribute has been inserted successfully'));
+        Session::flash("success","success",translate('Attribute has been inserted successfully'));
         return redirect()->route('attributes.index');
     }
 

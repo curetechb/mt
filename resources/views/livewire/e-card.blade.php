@@ -15,7 +15,7 @@
                             <select wire:change="updateOccasion" wire:model="occasion" name="occasion" id="occasion"
                                 class="form-select">
                                 @foreach ($images as $key => $imageName)
-                                    <option value="{{ $key }}">{{ ucwords(str_replace("-", " ", $key)) }}</option>
+                                    <option value="{{ $key }}">{{ $texts[$key] }}</option>
                                 @endforeach
                             </select>
                             <div class="invalid-feedback">

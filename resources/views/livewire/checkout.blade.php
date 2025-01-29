@@ -63,6 +63,22 @@
             </div>
             <hr>
         </div>
+
+        <div class="row mb-3">
+            <div class="col-xl-3 col-lg-4 col-md-6 px-4">
+               <div class="checkout_coupon_area d-flex align-items-center">
+                <input @if($coupon_discount > 0) disabled @endif wire:model="coupon_code" type="text" class="form-control rounded-0 py-2" name="code" placeholder="Apply Coupon" value="">
+                @if($coupon_discount > 0)
+                    <button wire:click="initializeData" type="button" class="btn btn-danger rounded-0 py-2">Remove</button></div>
+                @else
+                    <button wire:click="checkCoupon" type="button" class="btn btn-primary rounded-0 py-2">Apply</button></div>
+                @endif
+            </div>
+            @if($coupon_discount > 0)
+                <p class="text-success px-4">{{ currency_symbol().$coupon_discount}} discount applied.</p>
+            @endif
+        </div>
+
         @if ($general_error)
             <div class="d-flex justify-content-center">
                 <div class="alert alert-danger">
@@ -70,12 +86,22 @@
                 </div>
             </div>
         @endif
-        <div class="mt-5">
+        <div class="mt-2">
             <div class="d-flex justify-content-end checkout-btn-row">
                 <div>
-                    <div class="text-right mb-2"><small><span class="shipping_cost">{{ $shippingCost }}</span> Delivery Charge Included</small></div>
+                    <div class="text-right mb-2">
+                        @if($shippingCost == '৳0')
+                        <small>
+                            Delivery Charge Free
+                        </small>
+                        @else
+                        <small>
+                            <span class="shipping_cost">{{ $shippingCost }}</span> Delivery Charge Included
+                        </small>
+                        @endif
+                    </div>
                     <div class="checkout-proceed-btn-container">
-                        <button wire:click="placeOrder" type="submit" class="btn btn-primary cart-proceed-btn"><span>Proceed</span><span>{{ $totalCost }}</span></button>
+                        <button wire:click="placeOrder" type="submit" class="btn btn-primary cart-proceed-btn"><span>Proceed</span><span>{{ currency_symbol() . $totalCost }}</span></button>
                     </div>
                     <div><small>By clicking/tapping proceed, I agree to Muslim Town <a href="/page/terms" wire:navigate>Terms of Services</a></small></div>
                 </div>
@@ -84,3 +110,9 @@
     </div>
 
  </div>
+
+{{-- @push("scripts")
+<script>
+    document.getElementById("sidebar-container").style.display = 'none';
+</script>
+@endpush --}}

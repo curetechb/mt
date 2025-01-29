@@ -20,6 +20,7 @@ class CartSidebar extends Component
     public $shippingCost = 0;
     public $totalCost = 0;
     public $temp_id = null;
+    public $selectedAttribute = null;
 
     public function mount(){
 
@@ -74,15 +75,22 @@ class CartSidebar extends Component
     #[On('cart-updated')]
     public function update($product_id, $type, $open_sidebar = false){
 
-        // dd($product_id, $type);
-
-
 
         $cartItem = Cart::where("temp_user_id", $this->temp_id)->where("product_id", $product_id)->first();
 
         $product = Product::findOrFail($product_id);
 
+
         if(!$cartItem){
+
+            $attribute_values = $product->attribute_values ? explode(",",$product->attribute_values) : [];
+            if(count($attribute_values) <= 0){
+                $this->selectedAttribute = null;
+            }
+            if(count($attribute_values) > 0 && !$this->selectedAttribute){
+                $this->dispatch("product_error", "Please Select ".$product->attribute_name);
+                return;
+            }
 
             if($product->current_stock <= 0){
                 $this->dispatch("product_error", "Product out of Stock");
@@ -92,7 +100,8 @@ class CartSidebar extends Component
             $cartItem = Cart::create([
                 "temp_user_id" => $this->temp_id,
                 "product_id" => $product_id,
-                "quantity" => $product->min_qty
+                "quantity" => $product->min_qty,
+                "variation" => $this->selectedAttribute
             ]);
 
         }else{
@@ -143,5 +152,11 @@ class CartSidebar extends Component
 
         $this->initializeData();
         $this->dispatch('refresh-welcome');
+    }
+
+    
+    #[On('update-attribute')]
+    public function updateAttribute($value){
+        $this->selectedAttribute = $value;
     }
 }

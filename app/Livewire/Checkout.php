@@ -10,6 +10,7 @@ use DB;
 use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use App\Models\Address;
+use App\Models\Coupon;
 use App\Models\Order;
 use App\Models\OrderDetail;
 
@@ -20,6 +21,8 @@ class Checkout extends Component
     public $name = '';
     public $address = '';
     public $payment_method = 'cash_on_delivery';
+    public $coupon_code = '';
+    public $coupon_discount = 0;
 
 
     public $shippingCost = 0;
@@ -27,10 +30,10 @@ class Checkout extends Component
     public $temp_id = null;
     public $general_error = "";
 
-    public function mount(){
+    public function mount()
+    {
 
         $this->initializeData();
-
     }
 
     public function initializeData()
@@ -38,9 +41,9 @@ class Checkout extends Component
         $cart_total = $this->getCartTotal();
         $shipping_cost = get_setting("flat_rate_shipping_cost");
 
-        $this->shippingCost = currency_symbol().$shipping_cost;
-        $this->totalCost = currency_symbol().($cart_total + $shipping_cost);
-
+        $this->shippingCost = currency_symbol() . $shipping_cost;
+        $this->totalCost = $cart_total + $shipping_cost;
+        $this->coupon_discount = 0;
     }
 
     public function render()
@@ -48,7 +51,8 @@ class Checkout extends Component
         return view('livewire.checkout');
     }
 
-    public function getCartTotal(){
+    public function getCartTotal()
+    {
 
         $temp_id = \Cookie::get("temp_id");
         $q = DB::table('carts')
@@ -66,7 +70,7 @@ class Checkout extends Component
     {
         $this->general_error = "";
 
-        $validated = $this->validate([ 
+        $validated = $this->validate([
             'phone_number' => 'required|min:11|max:11',
             'name' => 'required|min:3|max:100',
             'address' => 'required|min:3|max:200',
@@ -81,8 +85,12 @@ class Checkout extends Component
             // dd("Cart is empty");
         }
 
+
+        $coupon_discount = $this->checkCoupon();
+
+
         $address = Address::where('phone', $this->phone_number)->first();
-        
+
         if (!$address) {
             $address = new Address;
         }
@@ -100,7 +108,7 @@ class Checkout extends Component
 
 
         DB::beginTransaction();
-        try{
+        try {
 
             $order = new Order;
             $order->ordered_from = "web";
@@ -109,9 +117,10 @@ class Checkout extends Component
             $order->shipping_type = "delivery";
             $order->payment_type = $this->payment_method;
             $order->date = strtotime('now');
+            $order->coupon_discount = $coupon_discount;
             $order->save();
 
-            foreach ($carts as $cartItem){
+            foreach ($carts as $cartItem) {
 
                 $product = Product::find($cartItem['product_id']);
 
@@ -119,6 +128,7 @@ class Checkout extends Component
                 $order_detail->order_id = $order->id;
                 $order_detail->seller_id = $product->user_id;
                 $order_detail->product_id = $product->id;
+                $order_detail->variation = $cartItem->variation;
 
                 $order_detail->price = $product->unit_price * $cartItem['quantity'];
                 $order_detail->tax = $cartItem['tax'] * $cartItem['quantity'];
@@ -130,7 +140,6 @@ class Checkout extends Component
                 $product->current_stock -= $cartItem['quantity'];
                 $product->num_of_sale += $cartItem['quantity'];
                 $product->save();
-
             }
 
             $cart_total = $this->getCartTotal();
@@ -145,9 +154,9 @@ class Checkout extends Component
             $order_id_len = strlen("$order->id");
             $new_order_code = $order->id;
 
-            if($order_id_len < $order_code_len){
+            if ($order_id_len < $order_code_len) {
                 $order_code = substr($order_code, 0, $order_code_len - $order_id_len);
-                $new_order_code = $order_code.$order->id;
+                $new_order_code = $order_code . $order->id;
             }
 
             $order->code = $new_order_code;
@@ -163,30 +172,29 @@ class Checkout extends Component
 
             DB::commit();
 
-            if($this->payment_method == "cash_on_delivery"){
-                $this->redirect("/purchased/$order->id"); 
-            }else{
+            if ($this->payment_method == "cash_on_delivery") {
+                $this->redirect("/purchased/$order->id");
+            } else {
                 $this->redirectToOnlinePayment($order);
             }
-
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             DB::rollBack();
             throw $e;
         }
     }
 
-    public function findPhoneInDb(){
+    public function findPhoneInDb()
+    {
 
         $this->resetErrorBag();
 
-        if(strlen($this->phone_number) >=11){
+        if (strlen($this->phone_number) >= 11) {
             $address = Address::where('phone', $this->phone_number)->first();
-            if($address){
+            if ($address) {
                 $this->name = $address->name;
                 $this->address = $address->address;
             }
         }
-
     }
 
     public function updatePaymentMethod($value)
@@ -194,16 +202,17 @@ class Checkout extends Component
         $this->payment_method = $value;
     }
 
-    public function redirectToOnlinePayment($order){
+    public function redirectToOnlinePayment($order)
+    {
 
         /* PHP */
         $post_data = array();
         $post_data['store_id'] = "curetechbd0live";
         $post_data['store_passwd'] = "66B346740CE5152037";
-        $post_data['total_amount'] = $order->grand_total;
+        $post_data['total_amount'] = $order->grand_total - $order->coupon_discount;
         $post_data['currency'] = "BDT";
-        $post_data['tran_id'] = "SSLCZ_LIVE_".uniqid();
-        
+        $post_data['tran_id'] = "SSLCZ_LIVE_" . uniqid();
+
         $post_data['success_url'] = route('sslcommerz.status', ['order_status' => 'success', 'order_id' => $order->id]);
         $post_data['fail_url'] = route('sslcommerz.status', ['order_status' => 'failed', 'order_id' => $order->id]);
         $post_data['cancel_url'] = route('sslcommerz.status', ['order_status' => 'cancel', 'order_id' => $order->id]);
@@ -266,10 +275,10 @@ class Checkout extends Component
         $direct_api_url = "https://securepay.sslcommerz.com/gwprocess/v4/api.php";
 
         $handle = curl_init();
-        curl_setopt($handle, CURLOPT_URL, $direct_api_url );
+        curl_setopt($handle, CURLOPT_URL, $direct_api_url);
         curl_setopt($handle, CURLOPT_TIMEOUT, 30);
         curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 30);
-        curl_setopt($handle, CURLOPT_POST, 1 );
+        curl_setopt($handle, CURLOPT_POST, 1);
         curl_setopt($handle, CURLOPT_POSTFIELDS, $post_data);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, FALSE); # KEEP IT FALSE IF YOU RUN FROM LOCAL PC
@@ -279,27 +288,98 @@ class Checkout extends Component
 
         $code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
-        if($code == 200 && !( curl_errno($handle))) {
-            curl_close( $handle);
+        if ($code == 200 && !(curl_errno($handle))) {
+            curl_close($handle);
             $sslcommerzResponse = $content;
         } else {
-            curl_close( $handle);
+            curl_close($handle);
             echo "FAILED TO CONNECT WITH SSLCOMMERZ API";
             exit;
         }
 
         # PARSE THE JSON RESPONSE
-        $sslcz = json_decode($sslcommerzResponse, true );
+        $sslcz = json_decode($sslcommerzResponse, true);
 
-        if(isset($sslcz['GatewayPageURL']) && $sslcz['GatewayPageURL']!="" ) {
-           
+        if (isset($sslcz['GatewayPageURL']) && $sslcz['GatewayPageURL'] != "") {
+
             return redirect()->to($sslcz['GatewayPageURL']);
-
         } else {
             $this->dispatch("product_error", "Something wen't wrong!");
             return;
         }
+    }
 
 
+    public function checkCoupon()
+    {
+
+        $code = $this->coupon_code;
+
+        $temp_id = \Cookie::get("temp_id");
+        $cart_items = Cart::where('temp_user_id',  $temp_id)->get();
+
+        if (count($cart_items) <= 0) {
+            $this->general_error = "Your cart is empty!";
+            return 0;
+            // dd("Cart is empty");
+        }
+
+
+        if ($cart_items->isEmpty()) {
+            $this->general_error = "Cart is empty";
+            return 0;
+        }
+
+        $coupon = Coupon::where('code', $code)->first();
+
+        if ($coupon == null) {
+            $this->general_error = "Invalid coupon code!";
+            return 0;
+        }
+
+        $in_range = strtotime(date('d-m-Y')) >= $coupon->start_date && strtotime(date('d-m-Y')) <= $coupon->end_date;
+
+        if (!$in_range) {
+            $this->general_error = "Coupon expired!";
+            return 0;
+        }
+
+        // $is_used = CouponUsage::where('user_id', auth()->user()->id)->where('coupon_id', $coupon->id)->first() != null;
+
+        // if ($is_used) {
+        //     $this->general_error = "You already used this coupon!";
+        // }
+
+
+        $coupon_details = json_decode($coupon->details);
+
+        $subtotal = 0;
+        $tax = 0;
+        $shipping = 0;
+        foreach ($cart_items as $key => $cartItem) {
+            $subtotal += $cartItem->product->unit_price * $cartItem['quantity'];
+            $tax += $cartItem['tax'] * $cartItem['quantity'];
+            $shipping += $cartItem['shipping'] * $cartItem['quantity'];
+        }
+        $sum = $subtotal + $tax + $shipping;
+
+        if ($sum >= $coupon_details->min_buy) {
+            if ($coupon->discount_type == 'percent') {
+                $coupon_discount = ($sum * $coupon->discount) / 100;
+                if ($coupon_discount > $coupon_details->max_discount) {
+                    $coupon_discount = $coupon_details->max_discount;
+                }
+            } elseif ($coupon->discount_type == 'amount') {
+                $coupon_discount = $coupon->discount;
+            }
+
+            $this->coupon_discount = $coupon_discount;
+            $this->totalCost = $this->totalCost - $coupon_discount;
+          
+            return $coupon_discount;
+        } else {
+            $this->general_error = 'Coupon Requires Minimum Order amount ' . single_price($coupon_details->min_buy);
+            return 0;
+        }
     }
 }

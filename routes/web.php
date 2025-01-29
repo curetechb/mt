@@ -800,3 +800,7 @@ Route::prefix('admin')->group(function () {
 // alter table users add column lock_emergency tinyint(1) default 0;
 // alter table orders add column is_emergency_order tinyint(1) default 0;
 // alter table users add column delivery_subscription tinyint(1) default 0;
+
+
+// ALTER TABLE `products` ADD `regular_price` DOUBLE(10,2) NULL DEFAULT NULL AFTER `unit_price`;
+// ALTER TABLE `products` ADD `attribute_name` VARCHAR(100) NULL AFTER `name`;

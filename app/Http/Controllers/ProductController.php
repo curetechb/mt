@@ -198,6 +198,17 @@ class ProductController extends Controller
             }
         }
         $product->tags = implode(',', $tags);
+
+        $product->attribute_name = $request->attribute_name;
+        $attribute_values = array();
+        if ($request->attribute_values[0] != null) {
+            foreach (json_decode($request->attribute_values[0]) as $key => $attr) {
+                array_push($attribute_values, $attr->value);
+            }
+        }
+        $product->attribute_values           = implode(',', $attribute_values);
+
+
         $product->refundable = $request->refundable ? true : false;
 
         $product->thumbnail_img = $request->thumbnail_img;
@@ -205,6 +216,7 @@ class ProductController extends Controller
         $product->photos = $request->photos;
 
         $product->unit_price = $request->unit_price;
+        $product->regular_price = $request->regular_price;
         // if ($request->date_range != null) {
         //     $date_var               = explode(" to ", $request->date_range);
         //     $product->discount_start_date = strtotime($date_var[0]);
@@ -403,13 +415,14 @@ class ProductController extends Controller
         }
         $product->tags           = implode(',', $tags);
 
-        $sizes = array();
-        if ($request->sizes[0] != null) {
-            foreach (json_decode($request->sizes[0]) as $key => $size) {
-                array_push($sizes, $size->value);
+        $product->attribute_name = $request->attribute_name;
+        $attribute_values = array();
+        if ($request->attribute_values[0] != null) {
+            foreach (json_decode($request->attribute_values[0]) as $key => $attr) {
+                array_push($attribute_values, $attr->value);
             }
         }
-        $product->sizes           = implode(',', $sizes);
+        $product->attribute_values           = implode(',', $attribute_values);
         // ALTER TABLE `products` ADD `sizes` TEXT NULL AFTER `name`;
         
         $product->refundable = $request->refundable ? true : false;
@@ -419,6 +432,7 @@ class ProductController extends Controller
         $product->banner_img             = $request->banner_img;
 
         $product->unit_price     = $request->unit_price;
+        $product->regular_price     = $request->regular_price;
         $product->discount       = $request->discount;
         $product->discount_type     = $request->discount_type;
         $product->current_stock = $request->current_stock;

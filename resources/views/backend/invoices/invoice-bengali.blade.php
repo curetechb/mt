@@ -79,7 +79,7 @@
                     <tr>
                         <td>
                             @if ($logo != null)
-                                <img src="{{ uploaded_asset($logo) }}" height="50" width="139">
+                                <img src="{{ uploaded_asset($logo) }}" height="60" width="139">
                             @else
                                 <img src="{{ static_asset('assets/img/footer-logo.png') }}" height="43" width="120">
                             @endif
@@ -103,22 +103,10 @@
                         </tr>
 
                         <tr>
-                            <td>ডেলিভারি এলাকা: {{ $shipping_address->state }}</td>
-                        </tr>
-
-                        <tr>
-                            <td>{{ $shipping_address->address }} <br/>
-                            @if ($shipping_address->floor_no)
-                                , ফ্লোর নং - {{ $shipping_address->floor_no }}
-                            @endif
-                            @if ($shipping_address->apartment)
-                                , অ্যাপার্টমেন্ট - {{ $shipping_address->apartment }}
-                            @endif
-                            </td>
+                            <td>{{ $shipping_address->address }}</td>
                         </tr>
                         <tr>
-                            <td>মোবাইল নম্বর: {{ $order->user->phone }}{{ json_decode($order->shipping_address)->phone ? ", ".json_decode($order->shipping_address)->phone : "" }}</td>
-                            <!--<td>{{ translate('Mobile') }}: {{ $order->user->phone }} {{ json_decode($order->shipping_address)->phone ?? "" }}</td>-->
+                            <td>মোবাইল নম্বর: {{ $shipping_address->phone }}</td>
                         </tr>
 
                         <tr>

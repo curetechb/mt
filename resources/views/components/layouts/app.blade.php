@@ -5,19 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'Muslim Town' }}</title>
+    <title>Muslim Lifestyle Store - Muslim Town</title>
+    <meta name="description" content="Muslim Town offers quality Islamic lifestyle items, hijab, panjabi, halal products, arabic calligraphy wall decor, tshirt, halal perfume, oud and more." />
+    <meta name="keywords" content="Islamic store, arabic calligraphy, Quran, hijab, tshirt, islamic tshirt design, mug, custom mug, oud, halal perfume, hudi, valentine day gift, shawl, table mat, pillow cover" />
+    <meta name="author" content="MT Team">
+    <link rel="canonical" href="https://muslim.town">
 
     <link rel="icon" type="image/x-icon" href="{{ asset('livewire/favicon.ico') }}">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link href="{{ asset('livewire/bootstrap.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('livewire/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -26,6 +28,19 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KTDTXR3W');</script>
     <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Muslim Town",
+      "url": "https://muslim.town",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://muslim.town/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -64,19 +79,19 @@
                         </ul>
                         <ul class="d-flex align-items-center justify-content-center mt-3">
                             <li><a class="d-block w-35px" href="https://www.facebook.com/muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/facebook.png') }}" alt=""
+                                        src="{{ asset('livewire/facebook.png') }}" alt="facebook"
                                         class="img-fluid" /></a></li>
                             <li class="mx-3"><a class="d-block w-35px" href="https://www.instagram.com/themuslim_town/" target="_blank"
-                                    rel="noreferrer"><img src="{{ asset('livewire/instagram.png') }}" alt=""
+                                    rel="noreferrer"><img src="{{ asset('livewire/instagram.png') }}" alt="instagram"
                                         class="img-fluid" /></a></li>
                             <li><a class="d-block w-35px" href="https://www.youtube.com/@muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/youtube.png') }}" alt=""
+                                        src="{{ asset('livewire/youtube.png') }}" alt="youtube"
                                         class="img-fluid" /></a></li>
                             <li class="mx-3"><a class="d-block w-35px" href="https://www.linkedin.com/company/muslimtown/" target="_blank"
-                                    rel="noreferrer"><img src="{{ asset('livewire/linkedin.png') }}" alt=""
+                                    rel="noreferrer"><img src="{{ asset('livewire/linkedin.png') }}" alt="linkedin"
                                         class="img-fluid" /></a></li>
                             <li><a class="d-block w-35px" href="https://www.tiktok.com/@muslimstown" target="_blank" rel="noreferrer"><img
-                                        src="{{ asset('livewire/tiktok.png') }}" alt=""
+                                        src="{{ asset('livewire/tiktok.png') }}" alt="tiktok"
                                         class="img-fluid" /></a></li>
                         </ul>
                     </div>
@@ -87,6 +102,7 @@
                         <ul>
                             <li class="mb-2"><a wire:navigate href="/page/terms">Terms &amp; Conditions</a></li>
                             <li class="mb-2"><a wire:navigate href="/page/privacy-policy">Privacy Policy</a></li>
+                            <li class="mb-2"><a wire:navigate href="/page/return-policy">Return & Refund Policy</a></li>
                             <li class="mb-2"><a wire:navigate href="/support">Support</a></li>
                             {{-- <li class="mb-2"><a wire:navigate href="/page/trade-license">Trade License</a></li>
                            <li class="mb-2"><a wire:navigate href="/page/disclaimer">Disclaimer</a></li>
@@ -152,6 +168,7 @@
     </script>
 
     @stack("scripts")
+
 </body>
 
 </html>

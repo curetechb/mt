@@ -290,6 +290,9 @@ class OrderController extends Controller
                     $product_stock->save();
                 }
 
+                $product = $orderDetail->product;
+                $product->current_stock = $product->current_stock + $orderDetail->quantity;
+                $product->save();
                 // $orderDetail->delete();
             }
             // $order->points_accrued = 0;
@@ -1011,25 +1014,25 @@ class OrderController extends Controller
 
                 // Give Point
                 // ------------------------------------------------------
-                if($order->referral_code != null){
+                // if($order->referral_code != null){
 
-                    $user_points = get_setting("referred_user_points") ?? 0;
-                    $referer_points = get_setting("referer_points") ?? 0;
+                //     $user_points = get_setting("referred_user_points") ?? 0;
+                //     $referer_points = get_setting("referer_points") ?? 0;
 
-                    $user = $order->user;
-                    $user->points += $user_points;
-                    $user->is_new_user = false;
-                    $user->save();
+                //     $user = $order->user;
+                //     $user->points += $user_points;
+                //     $user->is_new_user = false;
+                //     $user->save();
 
-                    $referer = User::where("referral_code", $order->referral_code)->first();
-                    $referer->points += $referer_points;
-                    $referer->save();
+                //     $referer = User::where("referral_code", $order->referral_code)->first();
+                //     $referer->points += $referer_points;
+                //     $referer->save();
 
-                }else{
-                    $user = $order->user;
-                    $user->points = $user->points + $order->points_accrued;
-                    $user->save();
-                }
+                // }else{
+                //     $user = $order->user;
+                //     $user->points = $user->points + $order->points_accrued;
+                //     $user->save();
+                // }
 
             }
 
@@ -1048,9 +1051,9 @@ class OrderController extends Controller
             }
 
 
-            if($order->delivery_status == "processing" || $order->delivery_status == "on_the_way" || $order->delivery_status == "next_day"){
-                SmsUtility::delivery_status_change($order->user->phone, $order);
-            }
+            // if($order->delivery_status == "processing" || $order->delivery_status == "on_the_way" || $order->delivery_status == "next_day"){
+            //     SmsUtility::delivery_status_change($order->user->phone, $order);
+            // }
 
             DB::commit();
             return 1;

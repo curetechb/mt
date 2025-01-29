@@ -16,7 +16,6 @@ class WelcomePage extends Component
     
     // public $categories = [];
     public $products = [];
-    public $cartItems = [];
 
     public $search = ''; // This will sync with the query string.
 
@@ -42,15 +41,8 @@ class WelcomePage extends Component
             $products = Product::orderBy('priority', 'desc')->where("published", 1)->get()->take(60);
         }
 
-        if(Auth::check()){
-            $carts = Cart::where("user_id", Auth::user()->id)->get();
-        }else{
-            $carts = Cart::where("temp_user_id", request("temp_id"))->get();
-        }
-
         // $this->categories = $categories; 
         $this->products = $products;
-        $this->cartItems = $carts;
 
     }
 
