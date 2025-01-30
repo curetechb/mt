@@ -26,7 +26,7 @@
                     </svg>
                     {{$cartCount}} Items in the Bag
                 </div>
-                <button type="button" class="rsidebar-close-btn toggle-cart-sidebar">Close</button>
+                <button type="button" class="rsidebar-close-btn toggle-cart-sidebar">Shop More</button>
             </div>
             <hr class="my-0" />
             <ul class="p-2 cart-list">
@@ -82,7 +82,7 @@
             @if ($path != "checkout" && $cartCount > 0)
                 <div class="px-2 cart-proceed">
                     <a class="btn btn-primary cart-proceed-btn" href="/checkout" wire:navigate>
-                        <span>Proceed</span><span class="ml-auto checkout-cart-total">{{$cartTotal}}</span>
+                        <span>Checkout</span><span class="ml-auto checkout-cart-total">{{$cartTotal}}</span>
                     </a>
                 </div>
             @endif
@@ -98,7 +98,7 @@
     <div class="bottom-bar-container d-md-none">
         <div class="bottombar_bottombar">
             <a href="#" class="bottombar_bottomcarttotal">{{$cartTotal}}</a>
-            <a wire:navigate href="{{$cartCount > 0 ? '/checkout' : '#'}}" class="bottombar_bottomcartproceed">Place Order</a>
+            <a href="#" class="bottombar_bottomcartproceed toggle-cart-sidebar">Place Order</a>
             <a href="#" class="bottombar_bottomcartcount toggle-cart-sidebar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="currentColor">

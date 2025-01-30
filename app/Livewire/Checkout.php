@@ -30,6 +30,8 @@ class Checkout extends Component
     public $temp_id = null;
     public $general_error = "";
 
+    public $cartItems = [];
+
     public function mount()
     {
 
@@ -44,6 +46,9 @@ class Checkout extends Component
         $this->shippingCost = currency_symbol() . $shipping_cost;
         $this->totalCost = $cart_total + $shipping_cost;
         $this->coupon_discount = 0;
+
+        $temp_id = \Cookie::get("temp_id");
+        $this->cartItems = Cart::where("temp_user_id", $temp_id)->get();
     }
 
     public function render()
@@ -234,7 +239,7 @@ class Checkout extends Component
         $post_data['cus_country'] = "Bangladesh";
         $post_data['cus_phone'] = $this->phone_number;
         // $post_data['cus_fax'] = "864-249-0312";
-
+    
         # SHIPMENT INFORMATION
         $post_data['shipping_method'] = "NO";
         // $post_data['ship_name'] = "Store Test";
@@ -313,6 +318,8 @@ class Checkout extends Component
     public function checkCoupon()
     {
 
+        $this->general_error = "";
+        
         $code = $this->coupon_code;
 
         $temp_id = \Cookie::get("temp_id");
@@ -381,5 +388,12 @@ class Checkout extends Component
             $this->general_error = 'Coupon Requires Minimum Order amount ' . single_price($coupon_details->min_buy);
             return 0;
         }
+    }
+
+
+    #[On('update-checktout')]
+    public function updateCheckout(){
+        $this->initializeData();
+        $this->render();
     }
 }

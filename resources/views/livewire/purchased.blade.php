@@ -27,7 +27,7 @@
                                             <tr>
                                                 <td class="pe-2">Total:</td>
                                                 <td><span
-                                                    class="pe-2 fw-bold">{{ currency_symbol() . $order->grand_total - $order->coupon_discount }}</span>
+                                                        class="pe-2 fw-bold">{{ currency_symbol() . $order->grand_total - $order->coupon_discount }}</span>
                                                 </td>
                                             </tr>
                                             {{-- <tr>
@@ -35,15 +35,20 @@
                                     <td><span class="pe-2 fw-bold">{{ ucwords(str_replace("_", " ", $order->payment_type)) }}</span></td>
                                  </tr> --}}
                                             <tr>
-                                                <td class="pe-2">Payment Status:</td>
+                                                <td class="pe-2">Payment Type:</td>
                                                 <td><span
-                                                        class="{{ $order->payment_status == 'paid' ? 'text-success' : 'text-danger' }} fw-bold">{{ ucwords($order->payment_status) }}</span>
+                                                        class="fw-bold">{{ ucwords(str_replace('_', ' ', $order->payment_type)) }}</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="pe-2">Payment Status:</td>
+                                                <td><span class="fw-bold">{{ ucwords($order->payment_status) }}</span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="pe-2">Delivery Status:</td>
                                                 <td><span
-                                                        class="text-primary fw-bold">{{ ucwords(str_replace('_', ' ', $order->delivery_status)) }}</span>
+                                                        class="fw-bold">{{ ucwords(str_replace('_', ' ', $order->delivery_status)) }}</span>
                                                 </td>
                                             </tr>
                                             @php
@@ -64,8 +69,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <a class="btn btn-primary w-100 mt-2 py-2s" href="/" wire:navigate>Back to
-                                    shopping</a>
+                                <a class="btn btn-primary w-100 mt-2 py-2s" href="/" wire:navigate>Back to shopping</a>
                             </div>
                         </div>
                     </div>

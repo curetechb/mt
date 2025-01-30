@@ -20,7 +20,12 @@ class Cart extends Model
         'coupon_applied',
         'quantity',
         'user_id',
-        'temp_user_id','owner_id','product_id','variation'];
+        'temp_user_id',
+        'owner_id',
+        'product_id',
+        'variation',
+        'ip_address'
+    ];
 
     public function user()
     {

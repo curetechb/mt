@@ -96,7 +96,7 @@
                         <div class="form-group row">
                             <label class="col-lg-3 col-from-label">{{translate('Attribute Name')}}</label>
                             <div class="col-lg-8">
-                                <input type="text" class="form-control" name="attribute_name" placeholder="{{translate('Attribute Name')}}" value="" required>
+                                <input type="text" class="form-control" name="attribute_name" placeholder="{{translate('Attribute Name')}}" value="">
                             </div>
                         </div>
 

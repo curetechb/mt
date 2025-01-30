@@ -849,9 +849,9 @@ small,
 }
 
 
-.payment-method-active {
+/* .payment-method-active {
     border: 2px solid orange !important
-}
+} */
 
 
 
@@ -2170,7 +2170,7 @@ small,
 .product_qtychanger button {
     border: none;
     outline: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -2325,7 +2325,8 @@ hr {
 .productcard_productbtnactive button:first-child {
     border-right: 1px solid #fff;
     cursor: pointer;
-    padding: 7px 10px;
+    padding: 7px 15px;
+    font-weight: 600;
 }
 
 .productcard_productbtnactive button {
@@ -2337,7 +2338,8 @@ hr {
 .productcard_productbtnactive button:last-child {
     border-left: 1px solid #fff;
     cursor: pointer;
-    padding: 7px 10px;
+    padding: 7px 15px;
+    font-weight: 600;
 }
 
 .checkout_change_address {
@@ -2723,3 +2725,15 @@ h1,h2,h3,h4,h5,h6,strong{
   .text-orange{
     color: orange;
   }
+
+  
+    
+.red-border{
+    border: 1px solid red;
+}
+
+.checkout-col h6{
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+}

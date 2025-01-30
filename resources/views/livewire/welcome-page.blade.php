@@ -149,7 +149,10 @@
                                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"></path></svg>
                                                                   </button>
                                                                </div>
-                                                               <button wire:click="$dispatchTo('cart-sidebar','cart-updated', {product_id: {{$product->id}}, type: '+', open_sidebar: true})" type="button" class="btn btn-primary my-3 px-5 fw-bold">Buy Now</button>
+                                                            </div>
+                                                            <div class="mt-3">
+                                                                  <button data-bs-dismiss="modal" aria-label="Close" type="button" class="btn btn-primary px-4 py-2 fw-bold toggle-cart-sidebar">Place Order</button>
+                                                                  <button data-bs-dismiss="modal" aria-label="Close" type="button" class="btn btn-primary px-4 py-2 fw-bold">Shop More</button>
                                                             </div>
                                                          @endif
                                                          <hr />

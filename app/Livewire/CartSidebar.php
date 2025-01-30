@@ -81,7 +81,7 @@ class CartSidebar extends Component
         $product = Product::findOrFail($product_id);
 
 
-        if(!$cartItem){
+        if(!$cartItem && $type == "+"){
 
             $attribute_values = $product->attribute_values ? explode(",",$product->attribute_values) : [];
             if(count($attribute_values) <= 0){
@@ -97,15 +97,20 @@ class CartSidebar extends Component
                 return;
             }
 
+            $ip = request()->ip();
+
             $cartItem = Cart::create([
                 "temp_user_id" => $this->temp_id,
                 "product_id" => $product_id,
                 "quantity" => $product->min_qty,
-                "variation" => $this->selectedAttribute
+                "variation" => $this->selectedAttribute,
+                "ip_address" => $ip
             ]);
 
         }else{
 
+            $this->selectedAttribute = null;
+            
             if($type == "+" && $product->current_stock <= $product->low_stock_quantity){
                 $this->dispatch("product_error", "Product out of Stock");
                 return;
@@ -120,8 +125,8 @@ class CartSidebar extends Component
 
             }
 
-            if($type == "-"){
-                if($cartItem->quantity <= $product->min_qty){
+            if($type == "-" && $cartItem){
+                if($cartItem->quantity <= $product->min_qty || $cartItem->quantity <= 1){
                     $cartItem->delete();
                 }else if($cartItem->quantity > 1){
                     $cartItem->quantity = $cartItem->quantity - 1;
@@ -135,6 +140,9 @@ class CartSidebar extends Component
                 $cartItem->save();
             }
 
+            if($type == "0"){
+                $cartItem->delete();
+            }
         }
 
         $this->initializeData();
@@ -142,6 +150,8 @@ class CartSidebar extends Component
         if($open_sidebar ==  true){
             $this->redirect("/checkout");
         }
+
+        $this->dispatch('update-checktout');
     }
 
     public function destroy($product_id){
